@@ -212,6 +212,8 @@ section {
 
 .section__text p {
     font-weight: 600;
+    text-align: justify;
+    text-justify: inner-word;
 }
 
 .section__text__p1 {
@@ -504,4 +506,5 @@ footer {
 
 footer p {
     text-align: center;
+
 }
