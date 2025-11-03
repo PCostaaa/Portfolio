@@ -24,11 +24,12 @@
     <nav id="desktop-nav">
         <div class="logo">Pedro Costa</div>
         <div>
+            <button class="lang-toggle" id="lang-toggle-desktop" aria-label="Change language">PT</button>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -37,6 +38,7 @@
     <nav id="hamburger-nav">
         <div class="logo">Pedro Costa</div>
         <div class="hamburger-menu" role="button" tabindex="0" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+            <button class="lang-toggle" id="lang-toggle-mobile" aria-label="Change language">PT</button>
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -44,10 +46,10 @@
             </div>
 
             <div class="menu-links" id="mobile-menu">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#about" onclick="toggleMenu()" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Contact</a></li>
             </div>
         </div>
     </nav>
@@ -59,13 +61,13 @@
         </div>
 
         <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
+            <p class="section__text__p1" data-i18n="profile.hello">Hello, I'm</p>
             <h1 class="title">Pedro Costa</h1>
-            <p class="section__text__p2">Web Developer</p>
+            <p class="section__text__p2" data-i18n="profile.title">Web Developer</p>
 
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Pedro-Costa-CV-EN.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+                <button class="btn btn-color-2" id="download-cv-btn" data-i18n="downloadCV" aria-label="Download CV">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'" data-i18n="contactInfo">Contact Info</button>
             </div>
 
             <div id="socials-container">
@@ -81,8 +83,8 @@
 
      <!-- ABOUT SECTION -->
       <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
+        <p class="section__text__p1" data-i18n="about.getToKnowMore">Get To Know More</p>
+        <h1 class="title" data-i18n="about.title">About Me</h1>
 
         <div class="section-container">
             <div class="section__pic-container">
@@ -94,25 +96,19 @@
                     <div class="details-container">
                         <img src="./assets/experience.png" alt="experience icon" class="icon">
 
-                        <h3>Experience</h3>
+                        <h3 data-i18n="about.experienceTitle">Experience</h3>
                         <p>Junior <br /> Web Development</p>
                     </div>
 
                     <div class="details-container">
                         <img src="./assets/education.png" alt="education icon" class="icon">
-
-                        <h3>Education</h3>
-                        <p>Professional Formation Course <br /> Master D</p>
+                        <h3 data-i18n="about.educationTitle">Education</h3>
+                        <p><span data-i18n="about.educationType">Professional Formation Course</span><br /> Master D</p>
                     </div>
                 </div>
 
                 <div class="text-container">
-                    <p>Junior Web Developer from Portugal, passionate about building clean, user-friendly and impactful web applications.
-                        With a solid   <br> foundation in <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b> and <b>MySQL</b>, I enjoy turning ideas into functional and visually
-                        appealing websites. Recently finished my Professional Formation Course in Web Development, I eager to apply my skills, learn continuously and contribute to innovative projects.
-                        I thrive on detail, problem-solving and creating seamless user experiences. <br>
-                        Let's build something amazing together!
-                    </p>
+                    <p data-i18n-html="about.paragraph"></p>
                 </div>
             </div>
         </div>
@@ -176,6 +172,13 @@
                                 <p>Junior</p>
                             </div>
                         </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>WordPress</h3>
+                                <p>CMS / Full Stack</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -194,8 +197,8 @@
                     <div class="article-container">
                         <img src="./assets/Homepage.jpg" alt="Project 1" class="project-img" loading="lazy">
                     </div>
-                    <h2 class="experience-sub-title project-title">Website for a music artist</h2>
-                    <span class="project-resume">The goal of this project is to create a complete website for a musical brand, combining visual presentation, e-commerce elements, and event promotion.
+                    <h2 class="experience-sub-title project-title" data-i18n="projects.p1.title">Website for a music artist</h2>
+                    <span class="project-resume" data-i18n="projects.p1.desc">The goal of this project is to create a complete website for a musical brand, combining visual presentation, e-commerce elements, and event promotion.
                         It serves as a practical case study demonstrating web development skills with HTML, CSS, JavaScript and PHP integration.
                     </span>
                     <div class="btn-container">
@@ -209,8 +212,8 @@
                     <div class="article-container">
                         <img src="./assets/Final-Project-WD.jpg" alt="Project 1" class="project-img">
                     </div>
-                    <h2 class="experience-sub-title project-title">Eventhive</h2>
-                    <span class="project-resume">A full-stack event management system with user registration, login, CRUD for events, ticket purchasing, shopping cart, user and admin panel.
+                    <h2 class="experience-sub-title project-title" data-i18n="projects.p2.title">Eventhive</h2>
+                    <span class="project-resume" data-i18n="projects.p2.desc">A full-stack event management system with user registration, login, CRUD for events, ticket purchasing, shopping cart, user and admin panel.
                         Built using HTML, CSS, BOOTSTRAP, JavaScript, PHP and MySQL. Built for the Final Project of the Web Development Course.
                     </span>
                     <div class="btn-container">
@@ -222,16 +225,11 @@
                     
                     <div class="details-container color-container">
                     <div class="article-container">
-                        <img src="./assets/calculator.jpg" alt="Project 1" class="project-img">
+                        <img src="./assets/WordPress.jpg" alt="Project 1" class="project-img">
                     </div>
-                    <h2 class="experience-sub-title project-title">Other Projects</h2>
-                    <span class="project-resume">Various begginer projects, built with the goal of pratice and enhancing my skills.
+                    <h2 class="experience-sub-title project-title" data-i18n="projects.p3.title">Website for a music artist (WordPress)</h2>
+                    <span class="project-resume" data-i18n="projects.p3.desc">The goal of this project was to recreate the same website for a musical artist using WordPress, made only using Gutenberg.
                     </span>
-                    <div class="btn-container">
-                        <a href="https://github.com/PCostaaa/Tutorials" target="_blank">
-                            <button class="btn btn-color-2 project-btn">Github</button>
-                        </a>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -240,17 +238,17 @@
 
         <!-- CONTACT SECTION -->
          <section id="contact">
-            <p class="section__text__p1">Get in Touch</p>
-            <h1 class="title">Contact Me</h1>
+            <p class="section__text__p1" data-i18n="contact.getInTouch">Get in Touch</p>
+            <h1 class="title" data-i18n="contact.title">Contact Me</h1>
             <div class="contact-info-upper-container">
                 <div class="contact-info-container">
                     <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
-                    <p><a href="mailto:pcostaaaa@gmail.com">Email</a></p>
+                    <p><a href="mailto:pcostaaaa@gmail.com" data-i18n="contact.emailLabel">Email</a></p>
                 </div>
 
                 <div class="contact-info-container">
                     <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-                    <p><a href="https://www.linkedin.com/in/pedroabcosta/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                    <p><a href="https://www.linkedin.com/in/pedroabcosta/" target="_blank" rel="noopener noreferrer" data-i18n="contact.linkedinLabel">LinkedIn</a></p>
                 </div>
             </div>
          </section>
@@ -260,14 +258,14 @@
             <nav>
             <div class="nav-links-cointainer">
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </div>
           </nav>
-          <p>Copyright &#169; 2025 Pedro Costa. All rights reserved.</p>
+          <p data-i18n="footer.copyright">Copyright &#169; 2025 Pedro Costa. All rights reserved.</p>
           </footer>
 
     <script src="./script.js"></script>

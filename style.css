@@ -508,3 +508,123 @@ footer p {
     text-align: center;
 
 }
+
+/* Language toggle styles */
+.lang-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.4rem;
+    padding:.32rem .6rem;
+    border-radius:999px;
+    background:transparent;
+    border:2px solid rgba(0,0,0,0.08);
+    font-weight:600;
+    font-size:.9rem;
+    color:var(--text-color,#222);
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+    line-height:1;
+}
+
+/* Hover / lift effect */
+.lang-toggle:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* Active / selected state (when aria-pressed="true") */
+.lang-toggle[aria-pressed="true"]{
+    background:var(--accent,#0a74ff);
+    color:#fff;
+    border-color:transparent;
+}
+
+/* Focus accessibility */
+.lang-toggle:focus{
+    outline:3px solid rgba(10,116,255,0.16);
+    outline-offset:2px;
+}
+
+/* Small adjustments for nav placement */
+#desktop-nav .lang-toggle{ margin-right:.6rem; }
+#hamburger-nav .lang-toggle{ margin-right:.4rem; padding:.28rem .5rem; }
+
+/* Hide desktop toggle on narrow screens if you prefer only mobile toggle visible */
+@media (max-width:640px){
+    #desktop-nav .lang-toggle{ display:none; }
+}
+
+/* Optional: make button slightly smaller on very small screens */
+@media (max-width:420px){
+    .lang-toggle{ padding:.22rem .45rem; font-size:.82rem; }
+}
+
+/* Navbar layout: desktop by default, hamburger hidden */
+#desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+}
+
+#hamburger-nav {
+  display: none; /* hidden on larger screens */
+}
+
+/* Group on the right of desktop nav: language button + links */
+#desktop-nav > div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Make nav-links a horizontal flex row and remove default list spacing */
+#desktop-nav .nav-links,
+#hamburger-nav .menu-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Ensure the language toggle sits centered with text links */
+.lang-toggle {
+  margin: 0;
+  align-self: center;
+  display: inline-flex;
+  height: 36px;
+}
+
+/* Hamburger menu grouping: keep the lang toggle aligned with the icon */
+#hamburger-nav .hamburger-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Mobile breakpoint: hide desktop nav, show hamburger nav */
+@media (max-width: 640px) {
+  #desktop-nav { display: none; }
+
+  #hamburger-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.6rem 0.9rem;
+    width: 100%;
+  }
+
+  /* ensure desktop lang toggle hidden (keeps previous behavior) */
+  #desktop-nav .lang-toggle { display: none; }
+
+  /* adjust menu-links placement on mobile */
+  #hamburger-nav .menu-links {
+    right: 0;
+    left: auto;
+  }
+}
