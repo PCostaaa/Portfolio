@@ -80,7 +80,8 @@ function toggleMenu() {
   };
 
   const STORAGE_KEY = "site-language";
-  const defaultLang = localStorage.getItem(STORAGE_KEY) || (navigator.language && navigator.language.startsWith("en") ? "pt" : "en");
+  // default to English when no stored preference
+  const defaultLang = localStorage.getItem(STORAGE_KEY) || "en";
 
   function applyLanguage(lang) {
     document.documentElement.lang = lang;
