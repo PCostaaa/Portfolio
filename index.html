@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pedro Costa - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pedro Costa's Portfolio - Web Developer"
+    />
+    <meta property="og:title" content="Pedro Costa - Portfolio" />
+    <meta
+      property="og:description"
+      content="Selected Web Projects, contact and experience"
+    />
+    <meta property="og:image" content="./assets/Homepage.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.png" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mediaqueries.css" />
+  </head>
+  <body>
+    <!-- DESKTOP MENU -->
+    <nav id="desktop-nav">
+      <div class="logo">Pedro Costa</div>
+      <div>
+        <button
+          class="lang-toggle"
+          id="lang-toggle-desktop"
+          type="button"
+          aria-label="Change language"
+          aria-pressed="false"
+        >
+          PT
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+          </li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hamburguer MENU -->
+    <nav id="hamburguer-nav">
+      <div class="logo">Pedro Costa</div>
+      <div
+        class="hamburguer-menu"
+        role="button"
+        tabindex="0"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <button
+          class="lang-toggle"
+          id="lang-toggle-mobile"
+          type="button"
+          aria-label="Change language"
+          aria-pressed="false"
+        >
+          PT
+        </button>
+        <div class="hamburguer-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="menu-links" id="mobile-menu">
+          <li>
+            <a href="#about" onclick="toggleMenu()" data-i18n="nav.about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              onclick="toggleMenu()"
+              data-i18n="nav.experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects" onclick="toggleMenu()" data-i18n="nav.projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact"
+              >Contact</a
+            >
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/IMG_CV-1.JPG" alt="Pedro Costa profile picture" />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1" data-i18n="profile.hello">Hello, I'm</p>
+        <h1 class="title">Pedro Costa</h1>
+        <p class="section__text__p2" data-i18n="profile.title">Web Developer</p>
+
+        <div class="btn-container">
+          <a
+            class="btn btn-color-2"
+            id="download-cv-btn"
+            data-i18n="downloadCV"
+            aria-label="Download CV"
+            href="./assets/Pedro-Costa-CV-EN.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            >Download CV</a
+          >
+          <button
+            class="btn btn-color-1"
+            onclick="location.href='./#contact'"
+            data-i18n="contactInfo"
+          >
+            Contact Info
+          </button>
+        </div>
+
+        <div id="socials-container">
+          <a
+            href="https://www.linkedin.com/in/pedroabcosta/"
+            target="_blank"
+            class="social--1"
+          >
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+            />
+          </a>
+          <a
+            href="https://github.com/PCostaaa"
+            target="_blank"
+            class="social--2"
+          >
+            <img
+              src="./assets/github.png"
+              alt="My Github Profile"
+              class="icon"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <p class="section__text__p1" data-i18n="about.getToKnowMore">
+        Get To Know More
+      </p>
+      <h1 class="title" data-i18n="about.title">About Me</h1>
+
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/IMG_CV-2.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+
+              <h3 data-i18n="about.experienceTitle">Experience</h3>
+              <p>
+                Junior <br />
+                Web Development
+              </p>
+            </div>
+
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3 data-i18n="about.educationTitle">Education</h3>
+              <p>
+                <span data-i18n="about.educationType"
+                  >Professional Formation Course</span
+                ><br />
+                Master D
+              </p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p data-i18n-html="about.paragraph"></p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <!-- EXPERIENCE SECTION  -->
+    <section id="experience">
+      <p class="section__text__p1" data-i18n="experience.getToKnowMore">
+        Explore My
+      </p>
+      <h1 class="title" data-i18n="experience.title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>BOOTSTRAP</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>WordPress</h3>
+                  <p>CMS / Full Stack</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <!-- PROJECTS SECTION  -->
+    <section id="projects">
+      <p class="section__text__p1" data-i18n="projects.getToKnowMore">
+        Browse My Recent
+      </p>
+      <h1 class="title" data-i18n="projects.title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- WEBSITE FOR A MUSIC ARTIST -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Homepage.jpg"
+                alt="Project 1"
+                class="project-img"
+                loading="lazy"
+              />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="projects.p1.title"
+            >
+              Website for a music artist
+            </h2>
+            <span class="project-resume" data-i18n="projects.p1.desc"
+              >The goal of this project is to create a complete website for a
+              musical brand, combining visual presentation, e-commerce elements,
+              and event promotion. It serves as a practical case study
+              demonstrating web development skills with HTML, CSS, JavaScript
+              and PHP integration.
+            </span>
+            <div class="btn-container">
+              <a
+                href="https://github.com/PCostaaa/CasoPratico-WD"
+                target="_blank"
+              >
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
+            </div>
+          </div>
+          <!-- FINAL WEB DEVELOPMENT PROJECT -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Final-Project-WD.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="projects.p2.title"
+            >
+              Eventhive
+            </h2>
+            <span class="project-resume" data-i18n="projects.p2.desc"
+              >A full-stack event management system with user registration,
+              login, CRUD for events, ticket purchasing, shopping cart, user and
+              admin panel. Built using HTML, CSS, BOOTSTRAP, JavaScript, PHP and
+              MySQL. Built for the Final Project of the Web Development Course.
+            </span>
+            <div class="btn-container">
+              <a
+                href="https://github.com/PCostaaa/Final-Project-WD"
+                target="_blank"
+              >
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
+            </div>
+          </div>
+          <!-- WEBSITE FOR A MUSIC ARTIST (WITH WORDPRESS) -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/WordPress.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="projects.p3.title"
+            >
+              Website for a music artist (WordPress)
+            </h2>
+            <span class="project-resume" data-i18n="projects.p3.desc"
+              >The goal of this project was to recreate the same website for a
+              musical artist using WordPress, made only using Gutenberg.
+            </span>
+          </div>
+        </div>
+
+        <div class="about-containers">
+          <!-- GUESS MY NUMBER -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/guess_number.jpg"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="projects.p4.title"
+            >
+              Guess My Number!
+            </h2>
+            <span class="project-resume" data-i18n="projects.p4.desc"
+              >Simple interactive web-based game developed using HTML, CSS, and
+              JavaScript, designed to practice DOM manipulation, event handling,
+              and basic game logic.
+            </span>
+
+            <div class="btn-container">
+              <a href="https://github.com/PCostaaa/Projects" target="_blank">
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
+            </div>
+          </div>
+          <!-- MODAL -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/modal.jpg"
+                alt="Project 5"
+                class="project-img"
+              />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="projects.p5.title"
+            >
+              Modal Window
+            </h2>
+            <span class="project-resume" data-i18n="projects.p5.desc"
+              >Simple interactive web-based game developed using HTML, CSS, and
+              JavaScript, designed to practice DOM manipulation, event handling,
+              and basic game logic.
+            </span>
+
+            <div class="btn-container">
+              <a href="https://github.com/PCostaaa/Projects" target="_blank">
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
+            </div>
+          </div>
+          <!-- PIG-GAME -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/pig_game.jpg"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="projects.p6.title"
+            >
+              Pig-Game
+            </h2>
+            <span class="project-resume" data-i18n="projects.p6.desc"
+              >Simple interactive web-based game developed using HTML, CSS, and
+              JavaScript, designed to practice DOM manipulation, event handling,
+              and basic game logic.
+            </span>
+
+            <div class="btn-container">
+              <a href="https://github.com/PCostaaa/Projects" target="_blank">
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <p class="section__text__p1" data-i18n="contact.getInTouch">
+        Get in Touch
+      </p>
+      <h1 class="title" data-i18n="contact.title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:pcostaaaa@gmail.com" data-i18n="contact.emailLabel"
+              >Email</a
+            >
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/pedroabcosta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="contact.linkedinLabel"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <nav>
+        <div class="nav-links-cointainer">
+          <ul class="nav-links">
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li>
+              <a href="#experience" data-i18n="nav.experience">Experience</a>
+            </li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p data-i18n="footer.copyright">
+        Copyright &#169; 2025 Pedro Costa. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

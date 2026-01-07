@@ -1,0 +1,177 @@
+/* ============================
+   GLOBAL RESPONSIVE OVERRIDES
+   ============================ */
+
+@media (max-width: 1200px) {
+  /* Swap desktop to hamburger */
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+
+  /* Sections: no fixed vh, no huge margins */
+  section {
+    height: auto;
+    margin: 0;
+    padding: 56px 20px;
+  }
+
+  /* Profile stacks */
+  #profile {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+    padding-top: 24px;
+  }
+
+  .section__pic-container {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .section__text {
+    width: 100%;
+  }
+
+  .section__text p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 52px 18px;
+  }
+
+  /* About stacks */
+  .about-containers {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-details-container {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  /* Experience: single column */
+  .experience-details-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Projects cards full width */
+  .details-container,
+  .color-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Prevent image cards from overflowing */
+  .project-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad: 16px;
+  }
+
+  /* Titles scale nicely */
+  .title {
+    font-size: 2.2rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  /* Buttons wrap nicely */
+  .btn-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btn {
+    width: min(260px, 100%);
+  }
+
+  /* About paragraph readability */
+  #about .text-container p,
+  .about-details-container .text-container p {
+    text-align: left;
+  }
+
+  /* Contact stacks */
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: calc(100% - 48px);
+    max-width: 400px;
+    padding: 1.25rem;
+    margin: 0.75rem auto;
+    border-radius: 1rem;
+    background-color: #f1f1f1;
+  }
+
+  .contact-info-container {
+    justify-content: center;
+  }
+
+  .contact-info-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 44px 14px;
+  }
+
+  .section__pic-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  footer {
+    height: auto;
+    margin: 0;
+    padding: 24px 14px;
+  }
+
+  /* Tap targets + avoid overflow */
+  .nav-links li a,
+  .menu-links a {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 420px) {
+  section {
+    padding: 40px 12px;
+  }
+  .title {
+    font-size: 1.9rem;
+  }
+
+  /* 320px safety: prevent horizontal overflow */
+  .btn {
+    width: 100%;
+  }
+  .contact-info-upper-container {
+    padding: 1rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    border-radius: 0.75rem;
+    background-color: #f1f1f1;
+  }
+
+  /* Make sure nothing forces a wide layout */
+  .project-resume {
+    max-width: 100%;
+  }
+}
