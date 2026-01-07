@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "projects.p3.title": "WordPress",
         "projects.p3.desc":
-          "O objetivo deste projeto foi recriar o mesmo site para um artista musical utilizando WordPress, feito apenas com Gutenberg.",
+          "O objetivo deste projeto é recriar o website de um Artista Musical utilizando WordPress (Gutenberg). Combina apresentação visual, elementos de comércio eletrónico e promoção de eventos. Foi desenvolvido por pura curiosidade e para prática.",
 
         "projects.p4.title": "Guess My Number!",
         "projects.p4.desc":
