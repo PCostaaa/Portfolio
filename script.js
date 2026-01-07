@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "projects.p3.title": "Wordpress",
         "projects.p3.desc":
-          "The goal of this project was to recreate the same website for a musical artist using WordPress, made only using Gutenberg.",
+          "The goal of this project is to re-create the Musical Artist website using WordPress (Gutenberg). It also combines visual presentation, e-commerce elements, and event promotion. Made for pure curiosity purposes and practice another technology.",
 
         "projects.p4.title": "Guess My Number!",
         "projects.p4.desc":
