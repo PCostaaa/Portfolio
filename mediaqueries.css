@@ -148,6 +148,44 @@
   .menu-links a {
     font-size: 1.05rem;
   }
+
+  /* Make contact info container narrower and centered on small screens */
+  .contact-info-upper-container {
+    width: calc(100% - 40px);
+    max-width: 320px;
+    margin: 0.75rem auto;
+    padding: 1rem;
+  }
+
+  /* Footer nav: keep all links on one line and tighten spacing */
+  footer .nav-links {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: nowrap; /* prevent wrapping */
+    padding: 0;
+    align-items: center;
+  }
+
+  footer .nav-links li {
+    white-space: nowrap; /* keep each link on one line */
+    margin: 0 0.4rem;
+    flex: 0 1 auto;
+  }
+
+  footer .nav-links a {
+    font-size: 0.95rem;
+    padding: 0 0.25rem;
+  }
+
+  /* Keep footer paragraph in one line on small screens */
+  footer p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95rem;
+    margin: 0.5rem 0 0;
+  }
 }
 
 @media (max-width: 420px) {
@@ -163,11 +201,28 @@
     width: 100%;
   }
   .contact-info-upper-container {
-    padding: 1rem;
-    width: 100%;
-    margin: 0.5rem 0;
+    padding: 0.9rem;
+    width: calc(100% - 28px);
+    max-width: 280px;
+    margin: 0.5rem auto;
     border-radius: 0.75rem;
     background-color: #f1f1f1;
+  }
+
+  /* Further reduce footer nav font-size/gap on very small screens to prevent wrapping */
+  footer .nav-links {
+    gap: 0.4rem;
+  }
+  footer .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    margin: 0.4rem 0 0;
   }
 
   /* Make sure nothing forces a wide layout */

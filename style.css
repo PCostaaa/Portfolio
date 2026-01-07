@@ -457,12 +457,14 @@ section {
 
 /* EXPERIENCE SECTION */
 #experience {
+  /* center the section and constrain width */
+  max-width: var(--container);
+  margin: 2rem auto;
   height: auto;
   position: relative;
   background-color: #fdfdfd;
   padding: 4rem 2rem;
   border-radius: 1rem;
-  margin-top: 2rem;
 }
 
 /* Experience-specific styling */
@@ -872,6 +874,29 @@ section,
 nav,
 footer {
   max-width: 100%;
+}
+
+/* MOBILE: ensure sections (esp. #experience) stay centered with side gaps */
+@media (max-width: 640px) {
+  /* reduce global section side margins on small screens */
+  section {
+    margin: 0 1rem;
+  }
+
+  /* center the experience card and keep a consistent gap on both sides */
+  #experience {
+    /* increase space above on mobile to separate from About */
+    margin: 3.5rem auto;
+    max-width: calc(100% - 2rem);
+    width: auto;
+    padding: 2.5rem 1rem 1.5rem; /* a bit more top padding for breathing room */
+    border-radius: 0.75rem;
+  }
+
+  /* allow details inside to expand naturally */
+  #experience .details-container {
+    max-width: none;
+  }
 }
 
 .project-resume {
