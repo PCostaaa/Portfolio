@@ -343,4 +343,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyLanguage(localStorage.getItem(STORAGE_KEY) || defaultLang);
   })();
+
+  // Video modal handlers
+  (function () {
+    const videoModal = document.getElementById("video-modal");
+    const videoIframe = document.getElementById("video-iframe");
+    const modalCloseBtn = videoModal
+      ? videoModal.querySelector(".video-modal__close")
+      : null;
+    let lastFocusedElement = null;
+
+    function openVideoModal(src, opener) {
+      if (!videoModal || !videoIframe) return;
+      lastFocusedElement = opener || document.activeElement;
+      const sep = src.includes("?") ? "&" : "?";
+      videoIframe.src = src + sep + "autoplay=1";
+      videoModal.classList.remove("hidden");
+      videoModal.setAttribute("aria-hidden", "false");
+      modalCloseBtn && modalCloseBtn.focus();
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeVideoModal() {
+      if (!videoModal || !videoIframe) return;
+      videoModal.classList.add("hidden");
+      videoModal.setAttribute("aria-hidden", "true");
+      videoIframe.src = "";
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      if (
+        lastFocusedElement &&
+        typeof lastFocusedElement.focus === "function"
+      ) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    document.querySelectorAll(".demo-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const src = btn.getAttribute("data-video");
+        if (!src) return;
+        openVideoModal(src, btn);
+      });
+    });
+
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener("click", closeVideoModal);
+    }
+
+    if (videoModal) {
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) closeVideoModal();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !videoModal.classList.contains("hidden")) {
+          closeVideoModal();
+        }
+      });
+    }
+  })();
 });
