@@ -60,6 +60,8 @@ a {
 :root {
   --container: 1100px;
   --pad: 24px;
+  --section-gap: 4rem; /* vertical space between sections on desktop */
+  --section-gap-sm: 2rem; /* smaller vertical gap on mobile */
 }
 .section__text__p2 {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
@@ -245,10 +247,9 @@ a:hover {
 /* SECTIONS */
 
 section {
-  /* allow sections to grow when content exceeds viewport height */
-  /* reduced min-height to decrease vertical spacing between sections */
-  min-height: 85vh;
-  margin: 0 10rem;
+  /* uniform vertical spacing between sections */
+  margin: var(--section-gap) 10rem;
+  padding-block: 0;
 }
 
 .section-container {
@@ -262,7 +263,8 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  padding-block: 3rem;
+  height: auto; /* let content define height so sections have consistent gaps */
 }
 
 .section__pic-container {
@@ -287,6 +289,11 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .section__text p {
@@ -297,6 +304,12 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  /* smaller and thinner for section lead-ins */
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.2px;
 }
 
 .section__text__p2 {
@@ -304,9 +317,24 @@ section {
   margin-bottom: 1rem;
 }
 
-.title {
-  font-size: 3rem;
+/* Profile-specific alignment tweaks */
+#profile .section__text__p2 {
+  margin: 0 0 1rem 0; /* ensure consistent spacing under profile title */
+}
+
+/* Profile-specific title: smaller and thinner */
+#profile .title {
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+  font-weight: 500;
   text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  #profile .title {
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+    font-weight: 500;
+  }
 }
 
 #socials-container {
@@ -489,6 +517,15 @@ section {
   justify-content: center;
   flex-direction: column;
   justify-content: baseline;
+}
+
+/* Center Experience and Projects section titles */
+#about .title,
+#experience .title,
+#projects .title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article-container {
@@ -932,28 +969,24 @@ footer {
 }
 .video-wrapper {
   position: relative;
-  padding-top: 56.25%; /* 16:9 */
   background: #000;
   border-radius: 8px;
   overflow: hidden;
-}
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  border: 0;
-  z-index: 1;
+  max-width: 100%;
+  aspect-ratio: 16 / 9; /* keeps video area stable and centered on desktop */
+  height: auto;
 }
+.video-wrapper iframe,
 .video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   border: 0;
-  z-index: 1;
+  z-index: 1; /* keep video underneath the close button */
+  object-fit: contain; /* ensure content is fully visible and centered */
+  will-change: transform; /* help modern browsers composite the layer properly */
+}
 }
 
 /* Poster overlay shown while the video is not yet loaded/playing */
@@ -1010,7 +1043,8 @@ footer {
   font-size: 1.25rem;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 10000;
+  z-index: 999999; /* ensure the close button is always above video layers */
+  pointer-events: auto;
 }
 
 /* --- FIX: hamburger icon visibility on mobile --- */

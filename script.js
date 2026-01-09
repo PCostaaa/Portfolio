@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "nav.projects": "Projects",
         "nav.contact": "Contact",
 
-        "profile.hello": "Hello,",
         "profile.title": "Web Developer",
         downloadCV: "Download CV",
         contactInfo: "Contact Info",
@@ -218,7 +217,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "nav.projects": "Projetos",
         "nav.contact": "Contactos",
 
-        "profile.hello": "Olá,",
         "profile.title": "Web Developer",
         downloadCV: "Download CV",
         contactInfo: "Contactos",

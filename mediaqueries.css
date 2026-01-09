@@ -11,10 +11,10 @@
     display: flex;
   }
 
-  /* Sections: no fixed vh, no huge margins */
+  /* Sections: no fixed vh, consistent smaller vertical gaps on smaller screens */
   section {
     height: auto;
-    margin: 0;
+    margin: var(--section-gap-sm) 0;
     padding: 56px 20px;
   }
 
@@ -247,6 +247,13 @@
   .details-container .btn-container .btn {
     width: 50%;
     max-width: 260px;
+    /* Ensure text stays horizontal and centered */
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 120px;
   }
 
   /* Modal responsive tweaks for very small screens */
