@@ -353,25 +353,59 @@ document.addEventListener("DOMContentLoaded", () => {
       : null;
     let lastFocusedElement = null;
 
-    function openVideoModal(src, opener) {
+    let __currentVideoSrc = "";
+    let __currentPosterSrc = "";
+    const videoPoster = document.getElementById("video-poster");
+    const videoPosterImg = document.getElementById("video-poster-img");
+    const videoPlayBtn = document.getElementById("video-play");
+
+    function _startVideo() {
+      if (!videoIframe || !__currentVideoSrc) return;
+      // set source and play
+      videoIframe.src = __currentVideoSrc;
+      videoIframe.setAttribute("playsinline", "");
+      videoIframe.setAttribute("controls", "");
+      videoIframe.load();
+      videoIframe.play().catch(() => {});
+      // hide poster
+      if (videoPoster) videoPoster.classList.add("hidden");
+      videoIframe.removeAttribute("aria-hidden");
+      modalCloseBtn && modalCloseBtn.focus();
+    }
+
+    function openVideoModal(src, opener, poster) {
       if (!videoModal || !videoIframe) return;
       lastFocusedElement = opener || document.activeElement;
-      // Support both iframe and HTML5 video element
+      __currentVideoSrc = src;
+      __currentPosterSrc = poster || "";
+
+      // If a poster URL is provided, show poster overlay and wait for explicit play
       if (
-        videoIframe.tagName &&
-        videoIframe.tagName.toLowerCase() === "iframe"
+        videoPoster &&
+        __currentPosterSrc &&
+        __currentPosterSrc.trim() !== ""
       ) {
-        const sep = src.includes("?") ? "&" : "?";
-        videoIframe.src = src + sep + "autoplay=1";
+        videoPosterImg.src = __currentPosterSrc;
+        videoPosterImg.alt = "Video poster";
+        videoPoster.classList.remove("hidden");
+        // keep video unloaded until user clicks play
+        videoIframe.removeAttribute("src");
+        videoIframe.setAttribute("aria-hidden", "true");
       } else {
-        // HTML5 video: set src and attempt to play
-        videoIframe.src = src;
-        videoIframe.setAttribute("playsinline", "");
-        videoIframe.setAttribute("controls", "");
-        videoIframe.load();
-        videoIframe.play().catch(() => {
-          /* autoplay may be blocked; user can still press play */
-        });
+        // no poster available: fallback to immediate load and play
+        if (
+          videoIframe.tagName &&
+          videoIframe.tagName.toLowerCase() === "iframe"
+        ) {
+          const sep = src.includes("?") ? "&" : "?";
+          videoIframe.src = src + sep + "autoplay=1";
+        } else {
+          videoIframe.src = src;
+          videoIframe.setAttribute("playsinline", "");
+          videoIframe.setAttribute("controls", "");
+          videoIframe.load();
+          videoIframe.play().catch(() => {});
+        }
       }
 
       videoModal.classList.remove("hidden");
@@ -413,13 +447,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".demo-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const src = btn.getAttribute("data-video");
+        const poster = btn.getAttribute("data-poster");
         if (!src || src.trim() === "" || src === "#") {
           alert("Video can not be loaded at the moment. Try again later.");
           return;
         }
-        openVideoModal(src, btn);
+        openVideoModal(src, btn, poster);
       });
     });
+
+    // Play overlay handlers
+    if (videoPlayBtn) {
+      videoPlayBtn.addEventListener("click", _startVideo);
+    }
+    if (videoPoster) {
+      videoPoster.addEventListener("click", (e) => {
+        // allow clicking poster background or pressing Enter/Space
+        _startVideo();
+      });
+      videoPoster.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") _startVideo();
+      });
+    }
 
     if (modalCloseBtn) {
       modalCloseBtn.addEventListener("click", closeVideoModal);

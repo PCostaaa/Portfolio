@@ -120,6 +120,22 @@
     font-size: 1rem;
   }
 
+  /* Ensure video fits inside the viewport and stays centered */
+  .video-wrapper {
+    padding-top: 0; /* disable 16:9 padding trick on smaller screens */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-wrapper video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 8rem);
+    object-fit: contain;
+  }
+
   /* About paragraph readability */
   #about .text-container p,
   .about-details-container .text-container p {
@@ -222,6 +238,17 @@
     width: min(260px, 100%);
   }
 
+  /* Project buttons on small screens: stack vertically and each occupy half the width */
+  .details-container .btn-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .details-container .btn-container .btn {
+    width: 50%;
+    max-width: 260px;
+  }
+
   /* Modal responsive tweaks for very small screens */
   .video-modal__content {
     max-width: calc(100% - 1rem);
@@ -236,6 +263,22 @@
     width: 1.8rem;
     height: 1.8rem;
     font-size: 0.9rem;
+  }
+
+  /* Small-screen video fit and centering */
+  .video-wrapper {
+    padding-top: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-wrapper video {
+    position: relative;
+    width: calc(100% - 1rem);
+    height: auto;
+    max-height: calc(100vh - 6rem);
+    object-fit: contain;
   }
 
   .contact-info-upper-container {

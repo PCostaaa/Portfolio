@@ -921,9 +921,14 @@ footer {
   position: relative;
   max-width: 900px;
   width: 100%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border-radius: 8px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 .video-wrapper {
   position: relative;
@@ -950,6 +955,49 @@ footer {
   border: 0;
   z-index: 1;
 }
+
+/* Poster overlay shown while the video is not yet loaded/playing */
+.video-poster {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  z-index: 2;
+  cursor: pointer;
+}
+.video-poster.hidden {
+  display: none;
+}
+.video-poster__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+}
+.video-poster__play {
+  position: relative;
+  z-index: 3;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.video-poster__play-icon {
+  color: #111;
+  font-size: 1.25rem;
+  margin-left: 2px;
+}
+
 .video-modal__close {
   position: absolute;
   right: -0.5rem;
