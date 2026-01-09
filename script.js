@@ -356,8 +356,24 @@ document.addEventListener("DOMContentLoaded", () => {
     function openVideoModal(src, opener) {
       if (!videoModal || !videoIframe) return;
       lastFocusedElement = opener || document.activeElement;
-      const sep = src.includes("?") ? "&" : "?";
-      videoIframe.src = src + sep + "autoplay=1";
+      // Support both iframe and HTML5 video element
+      if (
+        videoIframe.tagName &&
+        videoIframe.tagName.toLowerCase() === "iframe"
+      ) {
+        const sep = src.includes("?") ? "&" : "?";
+        videoIframe.src = src + sep + "autoplay=1";
+      } else {
+        // HTML5 video: set src and attempt to play
+        videoIframe.src = src;
+        videoIframe.setAttribute("playsinline", "");
+        videoIframe.setAttribute("controls", "");
+        videoIframe.load();
+        videoIframe.play().catch(() => {
+          /* autoplay may be blocked; user can still press play */
+        });
+      }
+
       videoModal.classList.remove("hidden");
       videoModal.setAttribute("aria-hidden", "false");
       modalCloseBtn && modalCloseBtn.focus();
@@ -369,7 +385,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!videoModal || !videoIframe) return;
       videoModal.classList.add("hidden");
       videoModal.setAttribute("aria-hidden", "true");
-      videoIframe.src = "";
+
+      if (
+        videoIframe.tagName &&
+        videoIframe.tagName.toLowerCase() === "iframe"
+      ) {
+        videoIframe.src = "";
+      } else {
+        // pause and clear video source to free resources
+        try {
+          videoIframe.pause();
+        } catch (e) {}
+        videoIframe.removeAttribute("src");
+        videoIframe.load();
+      }
+
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
       if (
