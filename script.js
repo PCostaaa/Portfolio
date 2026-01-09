@@ -383,7 +383,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".demo-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const src = btn.getAttribute("data-video");
-        if (!src) return;
+        if (!src || src.trim() === "" || src === "#") {
+          alert("Video can not be loaded at the moment. Try again later.");
+          return;
+        }
         openVideoModal(src, btn);
       });
     });
