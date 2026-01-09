@@ -987,7 +987,6 @@ footer {
   object-fit: contain; /* ensure content is fully visible and centered */
   will-change: transform; /* help modern browsers composite the layer properly */
 }
-}
 
 /* Poster overlay shown while the video is not yet loaded/playing */
 .video-poster {

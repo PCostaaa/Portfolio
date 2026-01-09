@@ -378,19 +378,21 @@ document.addEventListener("DOMContentLoaded", () => {
       __currentPosterSrc = poster || "";
 
       // If a poster URL is provided, show poster overlay and wait for explicit play
+      const usePosterOnly = false;
       if (
         videoPoster &&
         __currentPosterSrc &&
-        __currentPosterSrc.trim() !== ""
+        __currentPosterSrc.trim() !== "" &&
+        usePosterOnly
       ) {
         videoPosterImg.src = __currentPosterSrc;
-        videoPosterImg.alt = "Video poster";
+        videoPosterImg.alt = "Video Poster";
         videoPoster.classList.remove("hidden");
-        // keep video unloaded until user clicks play
+        // Keep video unloaded until user clicks play
         videoIframe.removeAttribute("src");
         videoIframe.setAttribute("aria-hidden", "true");
       } else {
-        // no poster available: fallback to immediate load and play
+        // no poster or we want autoplay
         if (
           videoIframe.tagName &&
           videoIframe.tagName.toLowerCase() === "iframe"
@@ -439,6 +441,16 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof lastFocusedElement.focus === "function"
       ) {
         lastFocusedElement.focus();
+      }
+
+      if (videoIframe && videoIframe.tagName.toLowerCase() === "video") {
+        videoIframe.addEventListener("click", () => {
+          if (videoIframe.paused) {
+            videoIframe.play();
+          } else {
+            videoIframe.pause();
+          }
+        });
       }
     }
 
