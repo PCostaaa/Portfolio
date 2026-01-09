@@ -99,6 +99,26 @@
   .btn {
     width: min(260px, 100%);
   }
+  /* Demo buttons: match main button responsive behavior */
+  .demo-btn {
+    width: min(260px, 100%);
+  }
+
+  /* Modal responsive tweaks */
+  .video-modal__content {
+    max-width: 720px;
+    padding: 0;
+  }
+  .video-modal {
+    padding: 0.75rem;
+  }
+  .video-modal__close {
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
 
   /* About paragraph readability */
   #about .text-container p,
@@ -197,9 +217,27 @@
   }
 
   /* 320px safety: prevent horizontal overflow */
-  .btn {
-    width: 100%;
+  .btn,
+  .demo-btn {
+    width: min(260px, 100%);
   }
+
+  /* Modal responsive tweaks for very small screens */
+  .video-modal__content {
+    max-width: calc(100% - 1rem);
+    border-radius: 6px;
+  }
+  .video-modal {
+    padding: 0.5rem;
+  }
+  .video-modal__close {
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+
   .contact-info-upper-container {
     padding: 0.9rem;
     width: calc(100% - 28px);
