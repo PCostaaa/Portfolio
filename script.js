@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // allow clicking poster background or pressing Enter/Space
         _startVideo();
       });
-      videoPoster.addEventListener("keydown", (e) => {
+      videoPoster.addEventListener("keypress", (e) => {
         if (e.key === "Enter" || e.key === " ") _startVideo();
       });
     }
@@ -489,7 +489,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === videoModal) closeVideoModal();
       });
 
-      document.addEventListener("keydown", (e) => {
+      document.addEventListener("keypress", (e) => {
         if (e.key === "Escape" && !videoModal.classList.contains("hidden")) {
           closeVideoModal();
         }
