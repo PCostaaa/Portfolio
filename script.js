@@ -1,7 +1,7 @@
 function toggleMenu(forceState) {
   const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburguer-icon");
-  const container = document.querySelector(".hamburguer-menu");
+  const icon = document.querySelector(".hamburger-icon");
+  const container = document.querySelector(".hamburger-menu");
   if (!menu || !icon || !container) return;
 
   const isCurrentlyOpen = menu.classList.contains("open");
@@ -34,9 +34,9 @@ function populateMobileMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // wire hamburguer interactions
-  const hamContainer = document.querySelector(".hamburguer-menu");
-  const hamIcon = document.querySelector(".hamburguer-icon");
+  // wire hamburger interactions
+  const hamContainer = document.querySelector(".hamburger-menu");
+  const hamIcon = document.querySelector(".hamburger-icon");
   const menu = document.querySelector(".menu-links");
 
   // icon click
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target.closest(".lang-toggle") || e.target.closest(".menu-links"))
         return;
       // When clicking container outside language button/icon, toggle
-      if (!e.target.closest(".hamburguer-icon")) {
+      if (!e.target.closest(".hamburger-icon")) {
         toggleMenu();
       }
     });
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // close the menu if you click outside it while open
   document.addEventListener("click", (e) => {
     if (!menu || !menu.classList.contains("open")) return;
-    const container = document.querySelector(".hamburguer-menu");
+    const container = document.querySelector(".hamburger-menu");
     if (container && !container.contains(e.target)) {
       toggleMenu(false);
     }
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Smooth scroll helpers (respect prefers-reduced-motion)
   function safeScrollToPosition(top = 0, left = 0) {
     const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     const behavior = prefersReduced ? "auto" : "smooth";
     try {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function safeScrollToElement(el) {
     if (!el) return;
     const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     const behavior = prefersReduced ? "auto" : "smooth";
     try {
@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
       en: {
         "nav.about": "About",
         "nav.experience": "Experience",
+        "nav.certifications": "Certifications",
         "nav.projects": "Projects",
         "nav.contact": "Contact",
 
@@ -171,11 +172,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.title": "About Me",
         "experience.getToKnowMore": "Explore My",
         "experience.title": "Experience",
+        "certifications.getToKnowMore": "Showcase My",
+        "certifications.title": "Certifications",
         "about.experienceTitle": "Experience",
         "about.educationTitle": "Education",
         "about.educationType": "Professional Formation Course",
         "about.paragraph":
-          "Junior Web Developer from Portugal, passionate about building clean, user-friendly and impactful web applications. With a solid foundation in <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b> and <b>MySQL</b>, I enjoy turning ideas into functional and visually appealing websites. Recently finished my Professional Formation Course in Web Development, I eager to apply my skills, learn continuously and contribute to innovative projects. I thrive on detail, problem-solving and creating seamless user experiences. <br>Let's build something amazing together!",
+          "I'm a skilled Junior Web Developer from Portugal with a passion for creating clean, user-friendly, and impactful web applications. Armed with a strong foundation in <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b>, and <b>MySQL</b>, I transform ideas into functional and visually stunning websites. Having recently completed my Professional Formation Course in Web Development, I'm eager to leverage my skills, continuously learn, and contribute to innovative projects. I excel in attention to detail, problem-solving, and crafting seamless user experiences. <br>Let's build something extraordinary together!",
 
         "projects.getToKnowMore": "Browse My Recent",
         "projects.title": "Projects",
@@ -210,10 +213,16 @@ document.addEventListener("DOMContentLoaded", () => {
         "projects.p6.title": "Pig-Game",
         "projects.p6.desc":
           "Two-player interactive dice game developed using HTML, CSS, and JavaScript. Players take turns rolling a dice to accumulate points, with the option to hold their current score or risk losing it by rolling a one. The project showcases strong use of JavaScript for game logic, state management, event handling, and dynamic DOM updates, along with polished UI styling and smooth user interaction.",
+
+        "certifications.c1.title":
+          "The Complete JavaScript Course 2025: From Zero to Expert!",
+        "certifications.c1.desc":
+          "Comprehensive JavaScript course covering fundamentals to advanced concepts including ES6+, asynchronous programming, DOM manipulation, and modern development practices. Completed with certification from Udemy.",
       },
       pt: {
         "nav.about": "Sobre",
         "nav.experience": "Experiência",
+        "nav.certifications": "Certificações",
         "nav.projects": "Projetos",
         "nav.contact": "Contactos",
 
@@ -225,11 +234,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.title": "Sobre Mim",
         "experience.getToKnowMore": "Saiba mais",
         "experience.title": "Experiência",
+        "certifications.getToKnowMore": "Mostre as Minhas",
+        "certifications.title": "Certificações",
         "about.experienceTitle": "Experiência",
         "about.educationTitle": "Formação",
         "about.educationType": "Curso de Formação Profissional",
         "about.paragraph":
-          "Desenvolvedor Web júnior de Portugal, apaixonado por criar aplicações web limpas, fáceis de usar e impactantes. Com uma base sólida em <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b> e <b>MySQL</b> e com conhecimentos em <b>WordPress</b>, gosto de transformar ideias em sites funcionais e visualmente apelativos. Recentemente concluí o Curso Profissional de Formação em Desenvolvimento Web e estou ansioso por aplicar as minhas competências, aprender continuamente e contribuir para projetos inovadores. Destaco-me pela atenção ao detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluídas. <br>Vamos construir algo incrível juntos!",
+          "Junior Web Developer de Portugal, apaixonado por criar aplicações web limpas, fáceis de usar e impactantes. Com uma base sólida em <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b> e <b>MySQL</b>, e com conhecimentos em <b>WordPress</b>, transformo ideias em sites funcionais e visualmente impressionantes. Tendo recentemente concluído o meu Curso de Formação Profissional em Desenvolvimento Web, estou ansioso por aplicar as minhas competências, aprender continuamente e contribuir para projetos inovadores. Destaco-me pela atenção ao detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluídas. <br>Vamos construir algo extraordinário juntos!",
 
         "projects.getToKnowMore": "Saiba mais",
         "projects.title": "Projetos",
@@ -264,8 +275,16 @@ document.addEventListener("DOMContentLoaded", () => {
         "projects.p6.title": "Pig-Game",
         "projects.p6.desc":
           "Jogo de dados interativo para dois jogadores desenvolvido com HTML, CSS e JavaScript. Os jogadores alternam turnos a lançar o dado para acumular pontos, tendo a opção de guardar a pontuação atual ou arriscar perdê-la ao lançar um 1. O projeto demonstra uma forte utilização de JavaScript para a lógica do jogo, gestão de estado, tratamento de eventos e atualizações dinâmicas do DOM, aliadas a um design de interface cuidado e uma interação fluida com o utilizador.",
+
+        "certifications.c1.title":
+          "The Complete JavaScript Course 2025: From Zero to Expert!",
+        "certifications.c1.desc":
+          "Curso abrangente de JavaScript que cobre conceitos fundamentais a avançados, incluindo ES6+, programação assíncrona, manipulação do DOM e práticas modernas de desenvolvimento. Concluído com certificação da Udemy.",
       },
     };
+
+    // expose translations globally just for this extra module
+    window.portfolioTranslations = translations;
 
     const STORAGE_KEY = "site-language";
     // default to English when no stored preference
@@ -329,6 +348,35 @@ document.addEventListener("DOMContentLoaded", () => {
       const current = localStorage.getItem(STORAGE_KEY) || defaultLang;
       const next = current === "en" ? "pt" : "en";
       applyLanguage(next);
+      window.dispatchEvent(
+        new CustomEvent("languageChanged", { detail: { lang: next } }),
+      );
+    }
+
+    function applyTheme(theme) {
+      const root = document.documentElement;
+      const normalized = theme === "dark" ? "dark" : "light";
+      if (normalized === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+      const themeButtons = document.querySelectorAll(".theme-toggle");
+      themeButtons.forEach((btn) => {
+        btn.textContent = normalized === "dark" ? "☀️" : "🌙";
+        btn.setAttribute(
+          "aria-label",
+          normalized === "dark"
+            ? "Switch to light mode"
+            : "Switch to dark mode",
+        );
+      });
+      localStorage.setItem("site-theme", normalized);
+    }
+
+    function toggleTheme() {
+      const currentTheme = localStorage.getItem("site-theme") || "light";
+      applyTheme(currentTheme === "dark" ? "light" : "dark");
     }
 
     document.querySelectorAll(".lang-toggle").forEach((btn) => {
@@ -339,7 +387,93 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    document.querySelectorAll(".theme-toggle").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleTheme();
+      });
+    });
+
     applyLanguage(localStorage.getItem(STORAGE_KEY) || defaultLang);
+    applyTheme(localStorage.getItem("site-theme") || "light");
+  })();
+
+  // Typing effect for about text
+  (function () {
+    const aboutTextElement = document.getElementById("about-text");
+    if (!aboutTextElement) return;
+
+    const translationsRef = window.portfolioTranslations || {};
+    const getCurrentLang = () => localStorage.getItem("site-language") || "en";
+
+    let index = 0;
+    let isTyping = false;
+
+    function getFullText() {
+      const lang = getCurrentLang();
+      const target = translationsRef[lang] || translationsRef.en || {};
+      return target["about.paragraph"] || aboutTextElement.textContent;
+    }
+
+    function typeWriter() {
+      const fullText = getFullText();
+      if (index < fullText.length) {
+        aboutTextElement.innerHTML =
+          fullText.substring(0, index + 1) + '<span class="cursor">|</span>';
+        index++;
+        setTimeout(typeWriter, 30);
+      } else {
+        aboutTextElement.innerHTML = fullText;
+        isTyping = false;
+      }
+    }
+
+    function startTyping() {
+      if (isTyping) return;
+      isTyping = true;
+      index = 0;
+      typeWriter();
+    }
+
+    // Start typing when about section comes into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startTyping();
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    observer.observe(document.getElementById("about"));
+
+    // Update typing when language changes
+    window.addEventListener("languageChanged", () => {
+      startTyping();
+    });
+  })();
+
+  // Scroll animations
+  (function () {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
   })();
 
   // Video modal handlers
