@@ -170,8 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "about.getToKnowMore": "Get To Know More",
         "about.title": "About Me",
+        "experience.getToKnowMore": "Explore My",
         "experience.title": "Experience",
-
+        "certifications.getToKnowMore": "Recent",
         "certifications.title": "Certifications",
         "about.experienceTitle": "Experience",
         "about.educationTitle": "Education",
@@ -181,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "projects.getToKnowMore": "Browse My Recent",
         "projects.title": "Projects",
-        "contact.getInTouch": "Get in Touch",
+        "contact.getInTouch": "Let's talk",
         "contact.title": "Contact Me",
         "contact.emailLabel": "Email",
         "contact.linkedinLabel": "LinkedIn",
@@ -229,10 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
         downloadCV: "Download CV",
         contactInfo: "Contactos",
 
+        "about.getToKnowMore": "Saiba Mais",
         "about.title": "Sobre Mim",
-
+        "experience.getToKnowMore": "Saiba mais",
         "experience.title": "Experiência",
-        "certifications.getToKnowMore": "As Minhas",
+        "certifications.getToKnowMore": "Outras formações",
         "certifications.title": "Certificações",
         "about.experienceTitle": "Experiência",
         "about.educationTitle": "Formação",
@@ -242,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "projects.getToKnowMore": "Saiba mais",
         "projects.title": "Projetos",
-        "contact.getInTouch": "Entrar em Contacto",
+        "contact.getInTouch": "Vamos conversar",
         "contact.title": "Contacte-me",
         "contact.emailLabel": "Email",
         "contact.linkedinLabel": "LinkedIn",
