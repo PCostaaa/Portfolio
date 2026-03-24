@@ -168,10 +168,10 @@ document.addEventListener("DOMContentLoaded", () => {
         downloadCV: "Download CV",
         contactInfo: "Contact Info",
 
+        "about.getToKnowMore": "Get To Know More",
         "about.title": "About Me",
-        "experience.getToKnowMore": "Explore My",
         "experience.title": "Experience",
-        "certifications.getToKnowMore": "My",
+
         "certifications.title": "Certifications",
         "about.experienceTitle": "Experience",
         "about.educationTitle": "Education",
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.paragraph":
           "I'm a skilled Junior Web Developer from Portugal with a passion for creating clean, user-friendly, and impactful web applications. Armed with a strong foundation in <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b>, and <b>MySQL</b>, I transform ideas into functional and visually stunning websites. Having recently completed my Professional Formation Course in Web Development, I'm eager to leverage my skills, continuously learn, and contribute to innovative projects. I excel in attention to detail, problem-solving, and crafting seamless user experiences. <br>Let's build something extraordinary together!",
 
-        "projects.getToKnowMore": "Recent",
+        "projects.getToKnowMore": "Browse My Recent",
         "projects.title": "Projects",
         "contact.getInTouch": "Get in Touch",
         "contact.title": "Contact Me",
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.title": "Sobre Mim",
 
         "experience.title": "Experiência",
-        "certifications.getToKnowMore": "As minhas",
+        "certifications.getToKnowMore": "As Minhas",
         "certifications.title": "Certificações",
         "about.experienceTitle": "Experiência",
         "about.educationTitle": "Formação",
@@ -240,7 +240,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.paragraph":
           "Junior Web Developer de Portugal, apaixonado por criar aplicações web limpas, fáceis de usar e impactantes. Com uma base sólida em <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b> e <b>MySQL</b>, e com conhecimentos em <b>WordPress</b>, transformo ideias em sites funcionais e visualmente impressionantes. Tendo recentemente concluído o meu Curso de Formação Profissional em Desenvolvimento Web, estou ansioso por aplicar as minhas competências, aprender continuamente e contribuir para projetos inovadores. Destaco-me pela atenção ao detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluídas. <br>Vamos construir algo extraordinário juntos!",
 
-        "projects.title": "Últimos Projetos",
+        "projects.getToKnowMore": "Saiba mais",
+        "projects.title": "Projetos",
         "contact.getInTouch": "Entrar em Contacto",
         "contact.title": "Contacte-me",
         "contact.emailLabel": "Email",
