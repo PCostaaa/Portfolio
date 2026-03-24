@@ -27,6 +27,8 @@ html.skip-link:focus {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 body {
@@ -76,7 +78,7 @@ a {
   --pad: 24px;
   --section-gap: 4rem; /* vertical space between sections on desktop */
   --section-gap-sm: 2rem; /* smaller vertical gap on mobile */
-  --bg: #ffffff;
+  --bg: #fafafa;
   --text: #111111;
   --subtext: #555555;
   --surface: #fdfdfd;
@@ -147,6 +149,20 @@ nav {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  display: inline-block;
+  transition: all 300ms ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
 }
 
 a {
@@ -406,7 +422,7 @@ section.visible {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .social--1 img:hover,
@@ -417,8 +433,23 @@ section.visible {
 }
 /* ICONS */
 .icon {
+  background: none !important;
+  border: none;
+  outline: none;
   cursor: pointer;
   height: 2rem;
+  transition:
+    transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    filter 300ms ease;
+}
+
+.icon:hover {
+  transform: translateY(-2px) scale(1.15);
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+.icon:active {
+  transform: translateY(-2px) scale(0.95);
 }
 
 /* BUTTONS */
@@ -587,7 +618,8 @@ section.visible {
 }
 
 #experience .details-container:hover {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.2);
+  transform: translateY(-6px);
 }
 
 .experience-sub-title {
@@ -1033,12 +1065,13 @@ footer p {
   padding: 0.7rem 1rem;
   border-radius: 8px;
   font-weight: 600;
-  color: var(--text-color, #222);
+  color: var(--nav-link);
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 #hamburger-nav .menu-links a:hover,
 #hamburger-nav .menu-links a:focus {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.08);
   outline: none;
 }
 
@@ -1090,7 +1123,7 @@ footer {
 }
 
 /* MOBILE: ensure sections (esp. #experience) stay centered with side gaps */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   /* reduce global section side margins on small screens */
   section {
     margin: 0 1rem;
@@ -1109,6 +1142,12 @@ footer {
   /* allow details inside to expand naturally */
   #experience .details-container {
     max-width: none;
+    flex: 1 1 100%;
+  }
+
+  #experience .about-containers {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
