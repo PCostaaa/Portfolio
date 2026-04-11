@@ -214,10 +214,26 @@ document.addEventListener("DOMContentLoaded", () => {
         "projects.p6.desc":
           "Two-player interactive dice game developed using HTML, CSS, and JavaScript. Players take turns rolling a dice to accumulate points, with the option to hold their current score or risk losing it by rolling a one. The project showcases strong use of JavaScript for game logic, state management, event handling, and dynamic DOM updates, along with polished UI styling and smooth user interaction.",
 
+        "projects.p7.title": "The Wild Oasis",
+        "projects.p7.desc":
+          "A high-performance, SEO-optimized guest portal with cabin listings, a real-time reservation engine, secure member authentication and personal profile management. Built using Next.js (App Router), Tailwind CSS, NextAuth.js and Supabase.",
+
+        "projects.p8.title": "The Wild Oasis Admin Dashboard",
+        "projects.p8.desc":
+          "A professional internal management system for resort staff featuring booking management, guest check-in/checkout flows, cabin inventory CRUD and real-time analytics. Built using React, TanStack Query (React Query), Styled Components, Supabase and Recharts.",
+
+        "projects.p9.title": "React Quiz",
+        "projects.p9.desc":
+          "An interactive educational application featuring timed assessments, progress tracking and dynamic score calculation to test React proficiency. Built using React, the Context API (for advanced state management) and a JSON-based mock backend.",
+
         "certifications.c1.title":
           "The Complete JavaScript Course 2025: From Zero to Expert!",
         "certifications.c1.desc":
           "Comprehensive JavaScript course covering fundamentals to advanced concepts including ES6+, asynchronous programming, DOM manipulation, and modern development practices. Completed with certification from Udemy.",
+        "certifications.c2.title":
+          "The Ultimate React Course 2025: React, Next.js, Redux & More",
+        "certifications.c2.desc":
+          "Comprehensive React course focused on modern React development with components, hooks, state management, routing, and best practices. Completed with certification from Udemy.",
       },
       pt: {
         "nav.about": "Sobre",
@@ -276,10 +292,25 @@ document.addEventListener("DOMContentLoaded", () => {
         "projects.p6.desc":
           "Jogo de dados interativo para dois jogadores desenvolvido com HTML, CSS e JavaScript. Os jogadores alternam turnos a lançar o dado para acumular pontos, tendo a opção de guardar a pontuação atual ou arriscar perdê-la ao lançar um 1. O projeto demonstra uma forte utilização de JavaScript para a lógica do jogo, gestão de estado, tratamento de eventos e atualizações dinâmicas do DOM, aliadas a um design de interface cuidado e uma interação fluida com o utilizador.",
 
+        "projects.p7.title": "The Wild Oasis",
+        "projects.p7.desc":
+          "Um portal de hóspedes de alto desempenho e otimizado para SEO, com listagem de cabanas, motor de reservas em tempo real, autenticação segura de membros e gestão de perfil pessoal. Construído com Next.js (App Router), Tailwind CSS, NextAuth.js e Supabase.",
+
+        "projects.p8.title": "The Wild Oasis Admin Dashboard",
+        "projects.p8.desc":
+          "Um sistema de gestão interna profissional para funcionários de resorts, com gestão de reservas, fluxos de check-in/check-out de hóspedes, CRUD de inventário de cabanas e análise de dados em tempo real. Construído com React, TanStack Query (React Query), Styled Components, Supabase e Recharts.",
+
+        "projects.p9.title": "The React Quiz",
+        "projects.p9.desc":
+          "Uma aplicação educativa interativa com avaliações cronometradas, acompanhamento de progresso e cálculo dinâmico de pontuação para testar a proficiência em React. Construída com React, Context API (para gestão de estado avançada) e um backend fictício (mock) baseado em JSON.",
+
         "certifications.c1.title":
           "The Complete JavaScript Course 2025: From Zero to Expert!",
         "certifications.c1.desc":
           "Curso abrangente de JavaScript que cobre conceitos fundamentais a avançados, incluindo ES6+, programação assíncrona, manipulação do DOM e práticas modernas de desenvolvimento. Concluído com certificação da Udemy.",
+        "certifications.c2.title": "The Ultimate React Course",
+        "certifications.c2.desc":
+          "Curso abrangente de React focado no desenvolvimento moderno com componentes, hooks, gestão de estado, routing e boas práticas. Concluído com certificação da Udemy.",
       },
     };
 
