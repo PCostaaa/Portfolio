@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.educationTitle": "Education",
         "about.educationType": "Professional Formation Course",
         "about.paragraph":
-          "I'm a skilled Junior Web Developer from Portugal with a passion for creating clean, user-friendly, and impactful web applications. Armed with a strong foundation in <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b>, and <b>MySQL</b>, I transform ideas into functional and visually stunning websites. Having recently completed my Professional Formation Course in Web Development, I'm eager to leverage my skills, continuously learn, and contribute to innovative projects. I excel in attention to detail, problem-solving, and crafting seamless user experiences. <br>Let's build something extraordinary together!",
+          "I'm a skilled Junior Web Developer from Portugal with a passion for creating clean, user-friendly and impactful web applications. Armed with a strong foundation in <b>JavaScript(ES6+)</b>, <b>PHP</b> and <b>MySQL</b>, I have specialized my expertise in modern frontend development through comprehensive certifications in <b>React</b> and <b>Vue.js (2 & 3)</b>.<br> I excel at transforming ideas into functional and visually stunning websites using tools like <b>Composition API</b>, <b>React Hooks</b> and advanced state management.<br> I am eager to leverage my skills to contribute to innovative projects. I thrive on attention to detail, problem solving and crafting seamless user experiences.<br>Let's build something extraordinary together!",
 
         "projects.getToKnowMore": "Browse My Recent",
         "projects.title": "Projects",
@@ -234,6 +234,9 @@ document.addEventListener("DOMContentLoaded", () => {
           "The Ultimate React Course 2025: React, Next.js, Redux & More",
         "certifications.c2.desc":
           "Comprehensive React course focused on modern React development with components, hooks, state management, routing, and best practices. Completed with certification from Udemy.",
+        "certifications.c3.title": "The Complete Vue.js Developer Course",
+        "certifications.c3.desc":
+          "Comprehensive Vue.js course focused on Vue 2 & 3, including Composition API, Pinia/Vuex, routing, and Firebase integration. Certified by Udemy.",
       },
       pt: {
         "nav.about": "Sobre",
@@ -256,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.educationTitle": "Formação",
         "about.educationType": "Curso de Formação Profissional",
         "about.paragraph":
-          "Junior Web Developer de Portugal, apaixonado por criar aplicações web limpas, fáceis de usar e impactantes. Com uma base sólida em <b>HTML</b>, <b>CSS</b>, <b>BOOTSTRAP</b>, <b>JavaScript</b>, <b>PHP</b> e <b>MySQL</b>, e com conhecimentos em <b>WordPress</b>, transformo ideias em sites funcionais e visualmente impressionantes. Tendo recentemente concluído o meu Curso de Formação Profissional em Desenvolvimento Web, estou ansioso por aplicar as minhas competências, aprender continuamente e contribuir para projetos inovadores. Destaco-me pela atenção ao detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluídas. <br>Vamos construir algo extraordinário juntos!",
+          "Sou um Web Developer de Portugal, focado em criar aplicações web limpas, intuitivas e de alto impacto. Com uma base sólida em <b>JavaScript(ES6+)</b>, <b>PHP</b> e <b>MySQL</b>, especializei o meu percurso no desenvolvimento frontend moderno através de certificações avançadas em <b>React</b> e <b>Vue.js (2 & 3)</b>.<br>Destaco-me ao transformar ideias em plataformas funcionais e visualmente apelativas, utilizando ferramentas como <b>Composition API</b>, <b>React Hooks</b> e gestão de dados complexa.<br>Sou movido pelo detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluidas.<br>Vamos construir algo extraordinário juntos!",
 
         "projects.getToKnowMore": "Saiba mais",
         "projects.title": "Projetos",
@@ -311,6 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "certifications.c2.title": "The Ultimate React Course",
         "certifications.c2.desc":
           "Curso abrangente de React focado no desenvolvimento moderno com componentes, hooks, gestão de estado, routing e boas práticas. Concluído com certificação da Udemy.",
+        "certifications.c3.title": "The Complete Vue.js Developer Course",
+        "certifications.c3.desc":
+          "Curso abrangente de Vue.js focado em Vue 2 e 3, incluindo Composition API, Pinia/Vuex, routing e integração com Firebase. Certificado pela Udemy.",
       },
     };
 

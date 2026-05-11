@@ -100,7 +100,7 @@
           <span></span><span></span><span></span>
         </div>
 
-        <div class="menu-links" id="mobile-menu">
+        <ul class="menu-links" id="mobile-menu">
           <li>
             <a href="#about" onclick="toggleMenu()" data-i18n="nav.about"
               >About</a
@@ -132,7 +132,7 @@
               >Contact</a
             >
           </li>
-        </div>
+        </ul>
       </div>
     </nav>
 
@@ -260,6 +260,7 @@
           <div class="details-container">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
+
               <article>
                 <img
                   src="./assets/checkmark.png"
@@ -334,6 +335,17 @@
                 />
                 <div>
                   <h3>Redux</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Vue.js</h3>
                   <p>Junior</p>
                 </div>
               </article>
@@ -417,15 +429,16 @@
             <span class="project-resume" data-i18n="certifications.c1.desc"
               >Comprehensive JavaScript course covering fundamentals to advanced concepts including ES6+, asynchronous programming, DOM manipulation, and modern development practices. Completed with certification from Udemy.</span
             >
-            <div class="btn-container">
+            <!-- <div class="btn-container">
               <a
                 href="https://www.udemy.com/course/the-complete-javascript-course/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
               </a>
-            </div>
+            </div> -->
           </div>
+
           <div class="details-container color-container">
             <div class="article-container">
               <div class="certification-img">
@@ -441,14 +454,22 @@
             <span class="project-resume" data-i18n="certifications.c2.desc"
               >Comprehensive React course focused on modern React development with components, hooks, state management, routing, and best practices. Completed with certification from Udemy.</span
             >
-            <div class="btn-container">
+            <!-- <div class="btn-container">
               <a
                 href="https://www.udemy.com/course/the-ultimate-react-course/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
               </a>
+            </div> -->
+          </div>
+          
+          <div class="details-container color-container">
+            <div class="certification-img">
+              <img src="./assets/Udemy_Logo_1.png" alt="Udemy logo">
             </div>
+            <h2 class="experience-sub-title project-title" data-i18n="certifications.c3.title">The Complete Vue.js Developer Course</h2>
+            <span class="project-resume" data-i18n="certifications.c3.desc">Comprehensive Vue.js course focused on Vue 2 & 3, including Composition API, Pinia/Vuex, routing, and Firebase integration. Certified by Udemy.</span>
           </div>
         </div>
       </div>
@@ -811,7 +832,7 @@
     <!-- FOOTER -->
     <footer>
       <nav>
-        <div class="nav-links-cointainer">
+        <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about" data-i18n="nav.about">About</a></li>
             <li>

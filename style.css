@@ -3,22 +3,25 @@ html {
   scroll-behavior: smooth;
 }
 
-html:focus-visible {
+:focus-visible {
   outline: 2px solid #0ea5e9;
   outline-offset: 2px;
 }
 
-html.skip-link {
+.skip-link {
   position: absolute;
   left: -9999px;
   top: auto;
+  z-index: 9999;
 }
 
-html.skip-link:focus {
+.skip-link:focus {
   left: 8px;
   top: 8px;
-  background: #fff;
+  background: var(--bg);
+  color: var(--text);
   padding: 0.5rem 0.75rem;
+  border-radius: 4px;
 }
 
 *,
@@ -28,7 +31,6 @@ html.skip-link:focus {
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  outline: none;
 }
 
 body {
@@ -142,7 +144,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: auto;
 }
 
 .nav-links {
@@ -219,7 +221,7 @@ a:hover {
   width: 80%;
   height: 3px;
   border-radius: 3px;
-  background: var(--text-color, #222);
+  background: var(--text);
   transition:
     transform 180ms ease,
     opacity 180ms ease;
@@ -480,26 +482,19 @@ section.visible {
   background: linear-gradient(135deg, #090979, #00d4ff);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+  color: #ffffff;
 }
 
-.btn-color-1:hover {
-  background: linear-gradient(135deg, #00d4ff, #090979);
-}
-
+/* Ghost/outlined variant — readable on both light and dark backgrounds */
 .btn-color-2 {
-  background: none;
-  color: #00d4ff;
+  background: transparent;
+  color: var(--text);
 }
 
 .btn-color-2:hover {
-  border: 2px solid #00d4ff;
   background: linear-gradient(135deg, #00d4ff, #090979);
   color: #ffffff;
   text-decoration: none;
-}
-
-.btn-container {
-  gap: 1rem;
 }
 
 /* ABOUT SECTION */
@@ -511,10 +506,12 @@ section.visible {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-details-container {
-  color: #0f0f0f;
+  color: var(--text);
   justify-content: center;
   flex-direction: column;
 }
@@ -540,7 +537,7 @@ section.visible {
 
 .details-container {
   padding: 1.25rem;
-  flex: 1;
+  flex: 1 1 260px;
   background-color: var(--card);
   border-radius: 16px;
   border: 1px solid var(--border);
@@ -589,13 +586,17 @@ section.visible {
 
 /* EXPERIENCE SECTION */
 #experience {
-  /* center the section and constrain width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: var(--container);
   margin: 2rem auto;
   height: auto;
   position: relative;
   background-color: var(--surface);
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
   border-radius: 1rem;
 }
 
@@ -603,21 +604,20 @@ section.visible {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
 #experience .details-container {
-  flex: 0 1 calc(50% - 1rem);
-  min-width: 250px;
-}
-
-/* Experience-specific styling */
-#experience .details-container {
-  max-height: none;
+  flex: 1;
+  min-width: 0;
   background-color: var(--card);
   padding: 1.5rem;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 
 #experience .details-container:hover {
   box-shadow: 0 12px 30px rgba(0, 212, 255, 0.2);
@@ -633,10 +633,11 @@ section.visible {
 }
 
 .experience-details-container {
-  display: grid;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Center Experience and Projects section titles */
@@ -659,29 +660,35 @@ section.visible {
 }
 
 #experience .article-container {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem;
-  align-items: stretch;
+  display: grid;
+  /* Cria duas colunas de tamanho igual */
+  grid-template-columns: repeat(2, 1fr);
+  /* Espaçamento entre colunas e linhas */
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+  justify-content: center;
+  text-align: left;
 }
 
 #experience article {
-  gap: 0.75rem;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.92),
     rgba(247, 250, 255, 0.92)
   );
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
-  min-height: 76px;
+  padding: 0.8rem 1.2rem;
+  min-height: auto;
+  border-radius: 12px;
 }
 
 #experience article .icon {
-  width: 20px;
-  height: 20px;
-  margin-top: 0.1rem;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 #experience article div {
@@ -692,7 +699,7 @@ section.visible {
 
 #experience article h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.2;
 }
 
@@ -789,13 +796,13 @@ article .icon {
   background: #ffffff;
 }
 
-/* In case .project-img wraps an inner img element */
-.project-img img {
+.project-img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: inherit;
+  border-radius: 8px;
   object-position: center center;
+  display: block;
 }
 
 /* Ensure project images are centered inside the project cards */
@@ -836,7 +843,7 @@ article .icon {
 }
 
 .project-btn {
-  color: #00d4ff;
+  color: var(--text);
   border-color: #00d4ff;
 }
 
@@ -870,9 +877,8 @@ article .icon {
   border-radius: 2rem;
   border: 1px solid var(--border);
   box-shadow: 0 6px 18px var(--shadow);
-  background-color: var(--surface);
+  background-color: var(--card);
   margin: 2rem auto;
-  padding: 1rem 1.25rem;
 }
 
 .contact-info-container {
@@ -883,8 +889,12 @@ article .icon {
   margin: 1rem;
 }
 
+.contact-info-container p a,
 .contact-info-container p {
-  font-size: larger;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-icon {
@@ -896,10 +906,20 @@ article .icon {
 }
 
 /* FOOTER */
+footer, #contact {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  height: auto !important;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+}
+
 footer {
   height: 20vh;
   margin: 0 1rem;
   padding-top: 1rem;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  border-top: 1px solid var(--border);
 }
 
 footer p {
@@ -1162,6 +1182,11 @@ html.dark-mode .about-details-container .text-container p {
   hyphens: auto;
 }
 
+html.dark-mode .contact-info-upper-container p a {
+  color: #fff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
 .cursor {
   animation: blink 1s infinite;
 }
@@ -1338,7 +1363,7 @@ footer {
     width: 28px;
     height: 3px;
     border-radius: 3px;
-    background: #111 !important;
+    background: var(--text) !important;
     opacity: 1 !important;
     transform: none;
   }
