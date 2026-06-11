@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Pedro Costa - Portfolio</title>
     <script>
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.classList.add('dark-mode');
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,7 +60,11 @@
           <li>
             <a href="#experience" data-i18n="nav.experience">Experience</a>
           </li>
-          <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+          <li>
+            <a href="#certifications" data-i18n="nav.certifications"
+              >Certifications</a
+            >
+          </li>
           <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -144,7 +148,9 @@
 
       <div class="section__text">
         <h1 class="title">Pedro Costa</h1>
-        <p class="section__text__p2" data-i18n="profile.title">Web Developer</p>
+        <p class="section__text__p2" data-i18n="profile.title">
+          Web Developer &amp; UI/UX Designer
+        </p>
 
         <div class="btn-container">
           <a
@@ -160,7 +166,7 @@
           >
           <button
             class="btn btn-color-1"
-            onclick="location.href='./#contact'"
+            onclick="location.href = './#contact'"
             data-i18n="contactInfo"
           >
             Contact Info
@@ -210,41 +216,40 @@
           />
         </div>-->
 
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="experience icon"
-                class="icon"
-              />
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img
+              src="./assets/experience.png"
+              alt="experience icon"
+              class="icon"
+            />
 
-              <h3 data-i18n="about.experienceTitle">Experience</h3>
-              <p>
-                Junior <br />
-                Web Development
-              </p>
-            </div>
-
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="education icon"
-                class="icon"
-              />
-              <h3 data-i18n="about.educationTitle">Education</h3>
-              <p>
-                <span data-i18n="about.educationType"
-                  >Professional Formation Course</span
-                ><br />
-                Master D
-              </p>
-            </div>
+            <h3 data-i18n="about.experienceTitle">Experience</h3>
+            <p>
+              Junior <br />
+              Web Development
+            </p>
           </div>
 
-          <div class="text-container">
-            <p data-i18n-html="about.paragraph" id="about-text"></p>
+          <div class="details-container">
+            <img
+              src="./assets/education.png"
+              alt="education icon"
+              class="icon"
+            />
+            <h3 data-i18n="about.educationTitle">Education</h3>
+            <p>
+              <span data-i18n="about.educationType"
+                >Professional Formation Course</span
+              ><br />
+              Master D
+            </p>
           </div>
+        </div>
+
+        <div class="text-container">
+          <p data-i18n-html="about.paragraph" id="about-text"></p>
         </div>
       </div>
     </section>
@@ -258,9 +263,13 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2
+              class="experience-sub-title"
+              data-i18n="experience.frontendTitle"
+            >
+              Frontend Development
+            </h2>
             <div class="article-container">
-
               <article>
                 <img
                   src="./assets/checkmark.png"
@@ -349,10 +358,37 @@
                   <p>Junior</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 data-i18n="experience.vueRouter">Vue Router</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 data-i18n="experience.pinia">Pinia</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
+            <h2
+              class="experience-sub-title"
+              data-i18n="experience.backendTitle"
+            >
+              Backend Development
+            </h2>
             <div class="article-container">
               <article>
                 <img
@@ -401,7 +437,68 @@
             </div>
           </div>
 
-          
+          <div class="details-container">
+            <h2 class="experience-sub-title" data-i18n="experience.uiuxTitle">
+              UI/UX Design
+            </h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Figma</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 data-i18n="experience.wireframing">Wireframing</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 data-i18n="experience.prototyping">Prototyping</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 data-i18n="experience.designSystems">Design Systems</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 data-i18n="experience.autoLayout">Auto Layout</h3>
+                  <p>Junior</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -427,7 +524,10 @@
               The Complete JavaScript Course 2025: From Zero to Expert!
             </h2>
             <span class="project-resume" data-i18n="certifications.c1.desc"
-              >Comprehensive JavaScript course covering fundamentals to advanced concepts including ES6+, asynchronous programming, DOM manipulation, and modern development practices. Completed with certification from Udemy.</span
+              >Comprehensive JavaScript course covering fundamentals to advanced
+              concepts including ES6+, asynchronous programming, DOM
+              manipulation, and modern development practices. Completed with
+              certification from Udemy.</span
             >
             <!-- <div class="btn-container">
               <a
@@ -452,7 +552,9 @@
               The Ultimate React Course 2025: React, Next.js, Redux & More
             </h2>
             <span class="project-resume" data-i18n="certifications.c2.desc"
-              >Comprehensive React course focused on modern React development with components, hooks, state management, routing, and best practices. Completed with certification from Udemy.</span
+              >Comprehensive React course focused on modern React development
+              with components, hooks, state management, routing, and best
+              practices. Completed with certification from Udemy.</span
             >
             <!-- <div class="btn-container">
               <a
@@ -463,13 +565,40 @@
               </a>
             </div> -->
           </div>
-          
+
           <div class="details-container color-container">
             <div class="certification-img">
-              <img src="./assets/Udemy_Logo_1.png" alt="Udemy logo">
+              <img src="./assets/Udemy_Logo_1.png" alt="Udemy logo" />
             </div>
-            <h2 class="experience-sub-title project-title" data-i18n="certifications.c3.title">The Complete Vue.js Developer Course</h2>
-            <span class="project-resume" data-i18n="certifications.c3.desc">Comprehensive Vue.js course focused on Vue 2 & 3, including Composition API, Pinia/Vuex, routing, and Firebase integration. Certified by Udemy.</span>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="certifications.c3.title"
+            >
+              The Complete Vue.js Developer Course
+            </h2>
+            <span class="project-resume" data-i18n="certifications.c3.desc"
+              >Comprehensive Vue.js course focused on Vue 2 & 3, including
+              Composition API, Pinia/Vuex, routing, and Firebase integration.
+              Certified by Udemy.</span
+            >
+          </div>
+
+          <div class="details-container color-container">
+            <div class="certification-img">
+              <img src="./assets/Udemy_Logo_1.png" alt="Udemy logo" />
+            </div>
+            <h2
+              class="experience-sub-title project-title"
+              data-i18n="certifications.c4.title"
+            >
+              Figma UI/UX Design Essentials
+            </h2>
+            <span class="project-resume" data-i18n="certifications.c4.desc"
+              >Comprehensive course on UI/UX Design, featuring end-to-end
+              workflows including wireframing, advanced prototyping, design
+              systems, Auto Layout, and responsive web and mobile UI
+              design.</span
+            >
           </div>
         </div>
       </div>
@@ -483,7 +612,6 @@
       <h1 class="title" data-i18n="projects.title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-
           <!-- WEBSITE FOR A MUSIC ARTIST -->
           <div class="details-container color-container">
             <div class="article-container">
@@ -497,12 +625,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p1.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p1.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p1.desc"> </span>
             <div class="btn-container">
               <a
                 href="https://github.com/PCostaaa/CasoPratico-WD"
@@ -532,12 +656,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p2.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p2.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p2.desc"> </span>
             <div class="btn-container">
               <a
                 href="https://github.com/PCostaaa/Final-Project-WD"
@@ -567,12 +687,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p3.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p3.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p3.desc"> </span>
             <div class="btn-container">
               <a
                 href="https://github.com/PCostaaa/WordPress-Caso-Pratico"
@@ -604,12 +720,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p4.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p4.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p4.desc"> </span>
 
             <div class="btn-container">
               <a href="https://github.com/PCostaaa/Projects" target="_blank">
@@ -637,12 +749,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p5.title"
-            >
-             
-            </h2>
-            <span class="project-resume" data-i18n="projects.p5.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p5.desc"> </span>
 
             <div class="btn-container">
               <a href="https://github.com/PCostaaa/Projects" target="_blank">
@@ -670,12 +778,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p6.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p6.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p6.desc"> </span>
 
             <div class="btn-container">
               <a href="https://github.com/PCostaaa/Projects" target="_blank">
@@ -694,7 +798,6 @@
 
         <!-- REACT PROJECTS -->
         <div class="about-containers">
-          
           <!--The Wild Oasis WEBSITE-->
           <div class="details-container color-container">
             <div class="article-container">
@@ -707,18 +810,22 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p7.title"
-            >
-            </h2>
-            <span class="project-resume" data-i18n="projects.p7.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p7.desc"> </span>
 
             <div class="btn-container">
-              <a href="https://github.com/PCostaaa/The-Wild-Oasis-Website" target="_blank">
+              <a
+                href="https://github.com/PCostaaa/The-Wild-Oasis-Website"
+                target="_blank"
+              >
                 <button class="btn btn-color-2 project-btn">Github</button>
               </a>
               <button
-              class="btn btn-color-2 project-btn demo-btn" data-video="Video-Demos/Final-The-Wild-Oasis-website.mp4">Demo</button>
+                class="btn btn-color-2 project-btn demo-btn"
+                data-video="Video-Demos/Final-The-Wild-Oasis-website.mp4"
+              >
+                Demo
+              </button>
             </div>
           </div>
 
@@ -734,15 +841,14 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p8.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p8.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p8.desc"> </span>
 
             <div class="btn-container">
-              <a href="https://github.com/PCostaaa/the-wild-oasis" target="_blank">
+              <a
+                href="https://github.com/PCostaaa/the-wild-oasis"
+                target="_blank"
+              >
                 <button class="btn btn-color-2 project-btn">Github</button>
               </a>
               <button
@@ -755,7 +861,7 @@
           </div>
 
           <!-- React Quiz -->
-           <div class="details-container color-container">
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/react-quiz.png"
@@ -766,12 +872,8 @@
             <h2
               class="experience-sub-title project-title"
               data-i18n="projects.p9.title"
-            >
-              
-            </h2>
-            <span class="project-resume" data-i18n="projects.p9.desc"
-              >
-            </span>
+            ></h2>
+            <span class="project-resume" data-i18n="projects.p9.desc"> </span>
 
             <div class="btn-container">
               <a href="https://github.com/PCostaaa/react-quiz" target="_blank">
@@ -838,14 +940,18 @@
             <li>
               <a href="#experience" data-i18n="nav.experience">Experience</a>
             </li>
-            <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+            <li>
+              <a href="#certifications" data-i18n="nav.certifications"
+                >Certifications</a
+              >
+            </li>
             <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
             <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <p data-i18n="footer.copyright">
-        Copyright &#169; 2025 Pedro Costa. All rights reserved.
+        Copyright &#169; 2026 Pedro Costa. All rights reserved.
       </p>
     </footer>
 

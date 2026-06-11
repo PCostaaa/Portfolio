@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "nav.projects": "Projects",
         "nav.contact": "Contact",
 
-        "profile.title": "Web Developer",
+        "profile.title": "Web Developer & UI/UX Designer",
         downloadCV: "Download CV",
         contactInfo: "Contact Info",
 
@@ -172,13 +172,22 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.title": "About Me",
         "experience.getToKnowMore": "Explore My",
         "experience.title": "Experience",
+        "experience.frontendTitle": "Frontend Development",
+        "experience.backendTitle": "Backend Development",
+        "experience.uiuxTitle": "UI/UX Design",
+        "experience.wireframing": "Wireframing",
+        "experience.prototyping": "Prototyping",
+        "experience.designSystems": "Design Systems",
+        "experience.autoLayout": "Auto Layout",
+        "experience.vueRouter": "Vue Router",
+        "experience.pinia": "Pinia",
         "certifications.getToKnowMore": "Recent",
         "certifications.title": "Certifications",
         "about.experienceTitle": "Experience",
         "about.educationTitle": "Education",
         "about.educationType": "Professional Formation Course",
         "about.paragraph":
-          "I'm a skilled Junior Web Developer from Portugal with a passion for creating clean, user-friendly and impactful web applications. Armed with a strong foundation in <b>JavaScript(ES6+)</b>, <b>PHP</b> and <b>MySQL</b>, I have specialized my expertise in modern frontend development through comprehensive certifications in <b>React</b> and <b>Vue.js (2 & 3)</b>.<br> I excel at transforming ideas into functional and visually stunning websites using tools like <b>Composition API</b>, <b>React Hooks</b> and advanced state management.<br> I am eager to leverage my skills to contribute to innovative projects. I thrive on attention to detail, problem solving and crafting seamless user experiences.<br>Let's build something extraordinary together!",
+          "I'm a skilled Junior Web Developer from Portugal with a passion for creating clean, user-friendly and impactful web applications. Armed with a strong foundation in <b>JavaScript(ES6+)</b>, <b>PHP</b> and <b>MySQL</b>, I have specialized my expertise in modern frontend development through comprehensive certifications in <b>React</b> and <b>Vue.js (2 & 3)</b>. I excel at transforming ideas into functional and visually stunning websites using tools like <b>Composition API</b>, <b>React Hooks</b> and advanced state management. I am eager to leverage my skills to contribute to innovative projects. I thrive on attention to detail, problem solving and crafting seamless user experiences.<br>Let's build something extraordinary together!",
 
         "projects.getToKnowMore": "Browse My Recent",
         "projects.title": "Projects",
@@ -230,13 +239,19 @@ document.addEventListener("DOMContentLoaded", () => {
           "The Complete JavaScript Course 2025: From Zero to Expert!",
         "certifications.c1.desc":
           "Comprehensive JavaScript course covering fundamentals to advanced concepts including ES6+, asynchronous programming, DOM manipulation, and modern development practices. Completed with certification from Udemy.",
+
         "certifications.c2.title":
           "The Ultimate React Course 2025: React, Next.js, Redux & More",
         "certifications.c2.desc":
           "Comprehensive React course focused on modern React development with components, hooks, state management, routing, and best practices. Completed with certification from Udemy.",
+
         "certifications.c3.title": "The Complete Vue.js Developer Course",
         "certifications.c3.desc":
           "Comprehensive Vue.js course focused on Vue 2 & 3, including Composition API, Pinia/Vuex, routing, and Firebase integration. Certified by Udemy.",
+
+        "certifications.c4.title": "Figma UI/UX Design Essentials",
+        "certifications.c4.desc":
+          "Comprehensive course on UI/UX Design, featuring end-to-end workflows including wireframing, advanced prototyping, design systems, Auto Layout, and responsive web and mobile UI design.",
       },
       pt: {
         "nav.about": "Sobre",
@@ -245,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "nav.projects": "Projetos",
         "nav.contact": "Contactos",
 
-        "profile.title": "Web Developer",
+        "profile.title": "Web Developer & UI/UX Designer",
         downloadCV: "Download CV",
         contactInfo: "Contactos",
 
@@ -253,13 +268,22 @@ document.addEventListener("DOMContentLoaded", () => {
         "about.title": "Sobre Mim",
         "experience.getToKnowMore": "Saiba mais",
         "experience.title": "Experiência",
+        "experience.frontendTitle": "Desenvolvimento Frontend",
+        "experience.backendTitle": "Desenvolvimento Backend",
+        "experience.uiuxTitle": "Design UI/UX",
+        "experience.wireframing": "Wireframing",
+        "experience.prototyping": "Prototipagem",
+        "experience.designSystems": "Sistemas de Design",
+        "experience.autoLayout": "Auto Layout",
+        "experience.vueRouter": "Vue Router",
+        "experience.pinia": "Pinia",
         "certifications.getToKnowMore": "Outras formações",
         "certifications.title": "Certificações",
         "about.experienceTitle": "Experiência",
         "about.educationTitle": "Formação",
         "about.educationType": "Curso de Formação Profissional",
         "about.paragraph":
-          "Sou um Web Developer de Portugal, focado em criar aplicações web limpas, intuitivas e de alto impacto. Com uma base sólida em <b>JavaScript(ES6+)</b>, <b>PHP</b> e <b>MySQL</b>, especializei o meu percurso no desenvolvimento frontend moderno através de certificações avançadas em <b>React</b> e <b>Vue.js (2 & 3)</b>.<br>Destaco-me ao transformar ideias em plataformas funcionais e visualmente apelativas, utilizando ferramentas como <b>Composition API</b>, <b>React Hooks</b> e gestão de dados complexa.<br>Sou movido pelo detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluidas.<br>Vamos construir algo extraordinário juntos!",
+          "Sou um Web Developer de Portugal, focado em criar aplicações web limpas, intuitivas e de alto impacto. Com uma base sólida em <b>JavaScript(ES6+)</b>, <b>PHP</b> e <b>MySQL</b>, especializei o meu percurso no desenvolvimento frontend moderno através de certificações avançadas em <b>React</b> e <b>Vue.js (2 & 3)</b>. Destaco-me ao transformar ideias em plataformas funcionais e visualmente apelativas, utilizando ferramentas como <b>Composition API</b>, <b>React Hooks</b> e gestão de dados complexa. Movido pelo detalhe, pela resolução de problemas e pela criação de experiências de utilizador fluidas.<br>Vamos construir algo extraordinário juntos!",
 
         "projects.getToKnowMore": "Saiba mais",
         "projects.title": "Projetos",
@@ -311,12 +335,18 @@ document.addEventListener("DOMContentLoaded", () => {
           "The Complete JavaScript Course 2025: From Zero to Expert!",
         "certifications.c1.desc":
           "Curso abrangente de JavaScript que cobre conceitos fundamentais a avançados, incluindo ES6+, programação assíncrona, manipulação do DOM e práticas modernas de desenvolvimento. Concluído com certificação da Udemy.",
+
         "certifications.c2.title": "The Ultimate React Course",
         "certifications.c2.desc":
           "Curso abrangente de React focado no desenvolvimento moderno com componentes, hooks, gestão de estado, routing e boas práticas. Concluído com certificação da Udemy.",
+
         "certifications.c3.title": "The Complete Vue.js Developer Course",
         "certifications.c3.desc":
           "Curso abrangente de Vue.js focado em Vue 2 e 3, incluindo Composition API, Pinia/Vuex, routing e integração com Firebase. Certificado pela Udemy.",
+
+        "certifications.c4.title": "Figma UI/UX Design Essentials",
+        "certifications.c4.desc":
+          "Curso focado em Design de Interfaces e Experiência do Utilizador, abrangendo desde o wireframing de baixa fidelidade até à prototipagem avançada, sistemas de design, Auto Layout e boas práticas de UI para dispositivos móveis e web.",
       },
     };
 
@@ -434,63 +464,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyLanguage(localStorage.getItem(STORAGE_KEY) || defaultLang);
     applyTheme(localStorage.getItem("site-theme") || "light");
-  })();
-
-  // Typing effect for about text
-  (function () {
-    const aboutTextElement = document.getElementById("about-text");
-    if (!aboutTextElement) return;
-
-    const translationsRef = window.portfolioTranslations || {};
-    const getCurrentLang = () => localStorage.getItem("site-language") || "en";
-
-    let index = 0;
-    let isTyping = false;
-
-    function getFullText() {
-      const lang = getCurrentLang();
-      const target = translationsRef[lang] || translationsRef.en || {};
-      return target["about.paragraph"] || aboutTextElement.textContent;
-    }
-
-    function typeWriter() {
-      const fullText = getFullText();
-      if (index < fullText.length) {
-        aboutTextElement.innerHTML =
-          fullText.substring(0, index + 1) + '<span class="cursor">|</span>';
-        index++;
-        setTimeout(typeWriter, 30);
-      } else {
-        aboutTextElement.innerHTML = fullText;
-        isTyping = false;
-      }
-    }
-
-    function startTyping() {
-      if (isTyping) return;
-      isTyping = true;
-      index = 0;
-      typeWriter();
-    }
-
-    // Start typing when about section comes into view
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            startTyping();
-          }
-        });
-      },
-      { threshold: 0.5 },
-    );
-
-    observer.observe(document.getElementById("about"));
-
-    // Update typing when language changes
-    window.addEventListener("languageChanged", () => {
-      startTyping();
-    });
   })();
 
   // Scroll animations

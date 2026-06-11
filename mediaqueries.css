@@ -2,8 +2,8 @@
    GLOBAL RESPONSIVE OVERRIDES
    ============================ */
 
+/* 1200px — swap to hamburger nav */
 @media (max-width: 1200px) {
-  /* Swap desktop to hamburger */
   #desktop-nav {
     display: none;
   }
@@ -11,14 +11,12 @@
     display: flex;
   }
 
-  /* Sections: no fixed vh, consistent smaller vertical gaps on smaller screens */
   section {
     height: auto;
     margin: var(--section-gap-sm) 0;
     padding: 56px 20px;
   }
 
-  /* Profile stacks */
   #profile {
     flex-direction: column;
     height: auto;
@@ -41,12 +39,12 @@
   }
 }
 
+/* 992px — tablet */
 @media (max-width: 992px) {
   section {
     padding: 52px 18px;
   }
 
-  /* About stacks */
   .about-containers {
     flex-direction: column;
     gap: 1.25rem;
@@ -90,65 +88,61 @@
     font-size: 0.9rem;
   }
 
-  /* Experience: single column */
   .experience-details-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  /* Projects and Certifications cards full width */
   .details-container,
   .color-container {
     width: 100%;
     max-width: 100%;
   }
 
-  #experience .article-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* Prevent image cards from overflowing */
   .project-img {
     width: 100%;
     max-width: 100%;
   }
 }
 
+/* 768px — large mobile */
 @media (max-width: 768px) {
   :root {
     --pad: 16px;
   }
 
-  /* Titles scale nicely */
+  section {
+    margin: 0 1rem;
+  }
+
   .title {
     font-size: 2.2rem;
   }
+
   .logo {
     font-size: 1.5rem;
   }
 
-  /* Buttons wrap nicely */
   .btn-container {
     flex-wrap: wrap;
     gap: 10px;
   }
-  .btn {
-    width: min(260px, 100%);
-  }
-  /* Demo buttons: match main button responsive behavior */
+
+  .btn,
   .demo-btn {
     width: min(260px, 100%);
   }
 
-  /* Modal responsive tweaks */
   .video-modal__content {
     max-width: 720px;
     padding: 0;
   }
+
   .video-modal {
     padding: 0.75rem;
   }
+
   .video-modal__close {
     right: 0.5rem;
     top: 0.5rem;
@@ -157,14 +151,14 @@
     font-size: 1rem;
   }
 
-  /* Ensure video fits inside the viewport and stays centered */
   .video-wrapper {
-    padding-top: 0; /* disable 16:9 padding trick on smaller screens */
+    padding-top: 0;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .video-wrapper video {
     position: relative;
     width: 100%;
@@ -173,47 +167,11 @@
     object-fit: contain;
   }
 
-  /* About paragraph readability */
   #about .text-container p,
   .about-details-container .text-container p {
     text-align: left;
   }
 
-  /* Contact stacks */
-  .contact-info-upper-container {
-    flex-direction: column;
-    gap: 0.75rem;
-    width: calc(100% - 48px);
-    max-width: 400px;
-    padding: 1.25rem;
-    margin: 0.75rem auto;
-    border-radius: 1rem;
-    background-color: var(--card);
-  }
-
-  .contact-info-container {
-    justify-content: center;
-  }
-
-  .contact-info-container p {
-    font-size: 1rem;
-  }
-
-  /*footer*/
-  .nav-links {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
   #contact {
     height: auto !important;
   }
@@ -225,6 +183,8 @@
     width: 90%;
     border-radius: 1rem;
     padding: 1.5rem;
+    margin: 0.75rem auto;
+    background-color: var(--card);
   }
 
   .contact-info-container {
@@ -263,7 +223,8 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+/* 600px — small mobile */
+@media (max-width: 600px) {
   html,
   body {
     width: 100%;
@@ -271,25 +232,30 @@
     position: relative;
   }
 
-  #experience .details-container {
-    width: 100%;
-    max-width: 350px;
+  section {
+    padding: 40px 15px !important;
+    margin: 1rem 0;
+  }
+
+  .title {
+    font-size: 1.8rem !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .section__pic-container {
+    width: 220px;
+    height: 220px;
   }
 
   .experience-details-container,
   .about-containers {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .about-containers,
-  .experience-details-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
     height: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .details-container {
@@ -305,14 +271,23 @@
     gap: 1rem;
   }
 
+  #experience {
+    height: auto;
+    width: auto;
+    max-width: calc(100% - 2rem);
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+  }
+
+  #experience .details-container {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
   #experience .article-container {
     grid-template-columns: 1fr !important;
     gap: 1rem;
     padding: 0 0.5rem;
-  }
-
-  #experience .details-container {
-    flex: 1 1 100%;
   }
 
   #experience article {
@@ -322,64 +297,49 @@
     background: rgba(0, 0, 0, 0.02);
   }
 
-  #experience {
-    height: auto;
-    width: auto;
-    max-width: calc(100% - 2rem);
-    margin: 2rem auto;
-    padding: 2rem 1rem;
-  }
-
-  section {
-    padding: 44px 14px;
-  }
-
-  .section__pic-container {
-    width: 220px;
-    height: 220px;
-  }
-
   footer {
     height: auto;
     margin: 0;
     padding: 24px 14px;
   }
 
-  /* Tap targets + avoid overflow */
   .nav-links li a,
   .menu-links a {
     font-size: 1.05rem;
   }
 
-  /* Make contact info container narrower and centered on small screens */
   .contact-info-upper-container {
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
     gap: 1rem;
+    padding: 1.5rem 1rem;
     width: 90%;
   }
 
   .contact-info-container {
+    width: 100%;
+    justify-content: center;
     gap: 1rem;
+    background: var(--surface-2);
+    border-radius: 15px;
+    padding: 0.75rem;
   }
 
   .contact-info-container img {
     width: 30px;
   }
 
-  /* Footer nav: keep all links on one line and tighten spacing */
   footer .nav-links {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    flex-wrap: nowrap; /* prevent wrapping */
+    flex-wrap: nowrap;
     padding: 0;
     align-items: center;
   }
 
   footer .nav-links li {
-    white-space: nowrap; /* keep each link on one line */
+    white-space: nowrap;
     margin: 0 0.4rem;
     flex: 0 1 auto;
   }
@@ -389,7 +349,6 @@
     padding: 0 0.25rem;
   }
 
-  /* Keep footer paragraph in one line on small screens */
   footer p {
     white-space: nowrap;
     overflow: hidden;
@@ -397,9 +356,7 @@
     font-size: 0.95rem;
     margin: 0.5rem 0 0;
   }
-}
 
-@media (max-width: 600px) {
   #certifications .details-container {
     padding: 1rem;
   }
@@ -419,58 +376,30 @@
   }
 }
 
-@media (max-width: 600px) {
-  .contact-info-upper-container {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .contact-info-container {
-    width: 100%;
-    justify-content: center;
-    background: var(--surface-2);
-    border-radius: 15px;
-    padding: 0.75rem;
-  }
-}
-
-@media (max-width: 600px) {
-  section {
-    padding: 40px 15px !important;
-    margin: 1rem 0;
-  }
-
-  .title {
-    font-size: 1.8rem !important;
-    margin-bottom: 1.5rem;
-  }
-}
-
+/* 420px — very small (iPhone SE etc.) */
 @media (max-width: 420px) {
   section {
     padding: 40px 12px;
   }
+
   .title {
     font-size: 1.9rem;
   }
 
-  /* 320px safety: prevent horizontal overflow */
   .btn,
   .demo-btn {
     width: min(260px, 100%);
   }
 
-  /* Project buttons on small screens: stack vertically and each occupy half the width */
   .details-container .btn-container {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
+
   .details-container .btn-container .btn {
     width: 50%;
     max-width: 260px;
-    /* Ensure text stays horizontal and centered */
     white-space: nowrap;
     display: inline-flex;
     justify-content: center;
@@ -479,14 +408,15 @@
     min-width: 120px;
   }
 
-  /* Modal responsive tweaks for very small screens */
   .video-modal__content {
     max-width: calc(100% - 1rem);
     border-radius: 6px;
   }
+
   .video-modal {
     padding: 0.5rem;
   }
+
   .video-modal__close {
     right: 0.5rem;
     top: 0.5rem;
@@ -495,7 +425,6 @@
     font-size: 0.9rem;
   }
 
-  /* Small-screen video fit and centering */
   .video-wrapper {
     padding-top: 0;
     height: auto;
@@ -503,6 +432,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .video-wrapper video {
     position: relative;
     width: calc(100% - 1rem);
@@ -520,10 +450,10 @@
     background-color: var(--card);
   }
 
-  /* Further reduce footer nav font-size/gap on very small screens to prevent wrapping */
   footer .nav-links {
     gap: 0.4rem;
   }
+
   footer .nav-links a {
     font-size: 0.9rem;
   }
@@ -536,7 +466,6 @@
     margin: 0.4rem 0 0;
   }
 
-  /* Make sure nothing forces a wide layout */
   .project-resume {
     max-width: 100%;
   }
