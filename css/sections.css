@@ -753,3 +753,24 @@
 .site-footer__links a:hover {
     color: var(--color-accent-text);
 }
+
+/* Link to a verifiable certificate, under a timeline entry */
+.timeline__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-accent-text);
+}
+
+.timeline__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.timeline__link .icon {
+    width: 1rem;
+    height: 1rem;
+}

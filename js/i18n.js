@@ -59,7 +59,7 @@ const TRANSLATIONS = {
         "about.expTitle": "Experiência",
         "about.expText": "Web Developer na ActiveMedia",
         "about.eduTitle": "Formação",
-        "about.eduText": "Curso de Web Development + 4 certificações Udemy",
+        "about.eduText": "Curso de Web Development + 5 certificações Udemy",
         "about.langTitle": "Línguas",
         "about.langText": "Português (nativo), Inglês (C1)",
         "about.p1":
@@ -85,6 +85,8 @@ const TRANSLATIONS = {
             "Realização de diagnósticos técnicos, documentação e atendimento ao cliente em ambientes de alta pressão e prazos.",
         "exp.job3.p2": "Gestão de prioridades de forma autónoma em sistemas de infraestrutura crítica.",
         "exp.education": "Formação e certificações",
+        "exp.cert.wp.date": "set 2026",
+        "exp.cert.view": "Ver certificado",
         "exp.edu1.title": "Curso de Formação Profissional em Web Development",
         "exp.edu2.title": "Curso Técnico Profissional de Gestão de Equipamentos Informáticos",
 
