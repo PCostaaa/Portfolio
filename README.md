@@ -20,13 +20,13 @@ index.html
 css/
   base.css         design tokens (colors, spacing, type), reset, utilities
   components.css   header, navigation, buttons, cards, tags, badge
-  sections.css     hero, about, skills, projects, contact, footer
+  sections.css     hero, about, experience, skills, projects, design, contact, footer
 js/
   i18n.js          Portuguese translations (English lives in index.html)
   main.js          one small function per UI feature
 assets/
   favicon.svg
-  images/          profile photos and project screenshots (800px JPEG)
+  images/          profile photos, project screenshots and Behance covers (design/)
   docs/            CV in English and Portuguese (PDF)
 Video-Demos/       project demo videos (.mp4), loaded only when a Demo button is clicked
 ```

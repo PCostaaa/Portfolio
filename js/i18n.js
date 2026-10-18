@@ -25,7 +25,7 @@ const TRANSLATIONS = {
 
         // Meta & global
         "meta.description":
-            "Pedro Costa, Web Developer em Sintra, Portugal. React, Next.js, Vue.js e design UI/UX — projetos, experiência e contacto.",
+            "Pedro Costa, Web Developer em Sintra, Portugal. WordPress, React, Next.js, Vue.js e design UI/UX — projetos, experiência e contacto.",
         "skip": "Saltar para o conteúdo",
         "logo.label": "Pedro Costa, voltar ao topo",
         "theme.toggle": "Alternar modo escuro",
@@ -37,12 +37,13 @@ const TRANSLATIONS = {
         "nav.experience": "Experiência",
         "nav.skills": "Competências",
         "nav.projects": "Projetos",
+        "nav.design": "Design",
         "nav.contact": "Contacto",
 
         // Hero
         "hero.badge": "Web Developer na ActiveMedia",
         "hero.lead":
-            "Levo ideias desde protótipos em Figma até código front-end em produção, com React, Next.js, Vue.js e WordPress.",
+            "Levo ideias desde protótipos em Figma até código front-end pronto para produção, com WordPress, React, Next.js e Vue.js.",
         "hero.cta": "Ver projetos",
         "hero.cv": "Descarregar CV",
         "hero.photoAlt": "Retrato de Pedro Costa",
@@ -50,6 +51,7 @@ const TRANSLATIONS = {
         "socials.label": "Redes sociais",
         "socials.github": "Perfil no GitHub",
         "socials.linkedin": "Perfil no LinkedIn",
+        "socials.behance": "Perfil no Behance",
         "socials.email": "Enviar-me um email",
 
         // About
@@ -63,7 +65,7 @@ const TRANSLATIONS = {
         "about.langTitle": "Línguas",
         "about.langText": "Português (nativo), Inglês (C1)",
         "about.p1":
-            "Sou web developer com experiência profissional em WordPress e académica em React, Next.js e Vue.js — da prototipagem em Figma até código front-end em produção. Dou importância aos pequenos detalhes que tornam uma interface clara, rápida e agradável de usar.",
+            "Sou web developer com experiência profissional em WordPress e projetos em React, Next.js e Vue.js — da prototipagem em Figma até código front-end em produção. Dou importância aos pequenos detalhes que tornam uma interface clara, rápida e agradável de usar.",
         "about.p2":
             "Antes de entrar no desenvolvimento web, passei quase seis anos como técnico de telecomunicações. Essa experiência deu-me a disciplina e a capacidade analítica que hoje aplico na resolução de problemas de código.",
 
@@ -107,9 +109,9 @@ const TRANSLATIONS = {
         "projects.oasis.alt": "Dashboard de administração do The Wild Oasis com estatísticas de reservas e gráfico de vendas",
         "projects.oasis.demoWebsite": "Demo do website",
         "projects.oasis.demoDashboard": "Demo do dashboard",
-        "projects.oasis.kind": "Full-stack · Gestão hoteleira e reservas",
+        "projects.oasis.kind": "Full-stack · Projeto de curso (Udemy)",
         "projects.oasis.desc":
-            "Plataforma dupla — painel de administração para a equipa e site de reservas para os clientes — com backend sincronizado, autenticação segura e gestão de dados em tempo real.",
+            "Plataforma dupla — painel de administração e site de reservas — com backend sincronizado, autenticação segura e gestão de dados em tempo real.",
         "projects.oasis.dashboardCode": "Código do dashboard",
         "projects.oasis.websiteCode": "Código do website",
         "projects.contacts.cover": "Gestor de Contactos",
@@ -147,13 +149,27 @@ const TRANSLATIONS = {
             "Três pequenos projetos focados em manipulação do DOM, gestão de eventos e estado de jogo: um jogo de adivinhar números, uma janela modal e um jogo de dados para dois jogadores.",
         "video.close": "Fechar vídeo",
 
-        // UX/UI case studies
-        "cases.title": "Casos de estudo de design UX/UI",
-        "cases.intro":
-            "Três casos de estudo em Figma, cada um desde a investigação até protótipos de alta fidelidade totalmente interligados e uma biblioteca de componentes.",
-        "cases.speakers": "E-commerce de áudio",
-        "cases.wavground": "App mobile de beats",
-        "cases.pulse": "Painel SaaS",
+        // Design (Behance)
+        "design.eyebrow": "Design UX/UI",
+        "design.title": "Trabalhos de design",
+        "design.intro":
+            "Casos de estudo em Figma — da investigação e moodboards a design systems e protótipos de alta fidelidade totalmente interligados.",
+        "design.view": "Ver no Behance",
+        "design.liveSite": "Ver site",
+        "design.profile": "Ver perfil completo no Behance",
+        "design.tag.branding": "Identidade de marca",
+        "design.grndflr.alt": "Logótipo GRNDFLR ao lado de um telemóvel com a página inicial da loja",
+        "design.grndflr.kind": "Marca e UI/UX · WordPress",
+        "design.grndflr.desc":
+            "Projeto conceptual: identidade de marca, design system e interface de e-commerce responsiva para a GRNDFLR, uma marca fictícia de streetwear de Lisboa.",
+        "design.pulse.alt": "Dashboard de analytics Pulse em dois ecrãs de portátil",
+        "design.pulse.kind": "Dashboard de analytics SaaS",
+        "design.pulse.desc":
+            "Dashboard SaaS conceptual com design system completo: moodboard, guia de estilos, 14 componentes reutilizáveis e 7 ecrãs que cobrem toda a experiência do produto.",
+        "design.wavground.alt": "Ecrãs da app Wavground: perfil de produtor e página inicial com beats em destaque",
+        "design.wavground.kind": "Marketplace de beats · App mobile",
+        "design.wavground.desc":
+            "App mobile conceptual para compradores de beats e produtores independentes, com biblioteca de componentes completa, sistema de estilos e protótipo interativo.",
 
         // Contact & footer
         "contact.eyebrow": "Fala comigo",
